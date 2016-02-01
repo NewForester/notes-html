@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<p>These notes were made while learning HTML using the HTML5 Tutorial provided on-line by w3shools.com. Their material is &quot;All Rights Reserved&quot;.</p>
+<p>HyperText Markup Language (HTML) is the standard mark-up language for creating web pages.</p>
+<p>HTML, Cascading Style Sheets (CSS) and JavaScript are the key technologies of the World Wide Web.</p>
+<p>HTML is the assembly language of the web: all other mark-up languages are converted to HTML and it is HTML that is rendered by web browsers.</p>
+<p>An understanding of HTML is therefore essential to web programming although it may be seldom used directly.</p>
+<p>HTML emerged at CERN in 1991. It has been an international standard since 2000. Work began on HTML5 in 2004. It merged in 2008 but was not standardised until 2014. At the beginning of 2017, web browsers may still not be fully HTML5 compatible.</p>
+<h2 id="html-documents">HTML Documents</h2>
+<p>An HTML document is a representation of a web page. It consists of nested HTML elements and nothing more. These describe the structure of the web page.</p>
+<p>HTML elements are represented by HTML tags. HTML tags label pieces of content.</p>
+<p>HTML tags tell a browser how to display a web page. The browser does not display the tags themselves, only their content.</p>
+<p>Each web page has the same top level structure:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="er">&lt;</span>!DocType html&gt;
+    <span class="kw">&lt;html&gt;</span>
+        <span class="kw">&lt;head&gt;</span>
+            <span class="co">&lt;!-- metadata - not for display --&gt;</span>
+        <span class="kw">&lt;/head&gt;</span>
+        <span class="kw">&lt;body&gt;</span>
+            <span class="co">&lt;!-- content - for display --&gt;</span>
+        <span class="kw">&lt;/body&gt;</span>
+    <span class="kw">&lt;/html</span></code></pre>
+<p><code>&lt;!DocType&gt;</code> declares the document type. According to the tutorial, <code>&lt;!DocType html&gt;</code> is sufficient to declare an HTML5 document.</p>
+<h2 id="html-elements">HTML Elements</h2>
+<p>All HTML documents consist of nested HTML elements: elements may contain elements.</p>
+<p>HTML elements are represented by HTML tags. They have the form:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;tag-name&gt;</span>content ...<span class="kw">&lt;/tag-name&gt;</span></code></pre>
+<!-- HTML Tags -->
+
+<p>HTML tags (normally) come in pairs - the start (or opening) tag and the end (or closing) tag. The closing tag is the opening tag but with a forward slash inserted before the tag name.</p>
+<p>The closing tag is considered optional<!-- by whom - browsers, the standard ?-->. Do not rely on this.</p>
+<p>Elements with no content are called empty elements. Empty elements, such as <code>&lt;br&gt;</code>, do not have an closing tag.</p>
+<p>Empty elements may be closed in the opening tag thus: <code>&lt;br /&gt;</code>. HTML5 does not require empty elements be closed but the stricter validation of XHTML does.</p>
+<p>HTML tags are case insensitive but lower case is recommended. Lower case is required for XHTML.</p>
+<h2 id="html-attributes">HTML Attributes</h2>
+<p>Any HTML element may have HTML attributes that provide additional information.</p>
+<p>Attributes are specified in the opening tag and (usually) come in name-value pairs with the form <code>name=value</code>.</p>
+<p>In the HTML5 standard, attribute names are case insensitive. However, lower case is recommended and is required for XHTML.</p>
+<p>The HTML5 standard does not require attribute values be quoted. However, quoting is recommended and is required for XHTML.</p>
+<p>Quoting of attributes values that contain spaces is necessary. Either quotes (<code>&quot;...&quot;</code>) or apostrophes (<code>'...'</code>) may be used.</p>
+<p>The choice may be influenced by the value itself:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;Around &#39; use quotes&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&#39;Around &quot; use apostrophe&#39;</span><span class="kw">&gt;</span></code></pre>
+<p>No mention at this stage of escape sequences.</p>
+<h2 id="element-and-attribute-examples">Element and Attribute Examples</h2>
+<!-- HTML Paragraphs -->
+
+<p>HTML Paragraphs are declared with the <code>&lt;p&gt;</code> tag:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>A paragraph.<span class="kw">&lt;/p&gt;</span></code></pre>
+<!-- Title Attribute -->
+
+<p>The <code>title=</code> attribute may be added to the <code>&lt;p&gt;</code> element.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;I am a tool-tip&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>The value of the attribute may be displayed as a tool-tip.</p>
+<!-- HTML Hyper-links -->
+
+<p>HTML Hyper-links are declared with the <code>&lt;a&gt;</code> tag:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;http://www.python.com&quot;</span><span class="kw">&gt;</span>Anywhere you know ?<span class="kw">&lt;/a&gt;</span></code></pre>
+<p>The <code>href=</code> attribute specifies the hyper-link. The content is the text displayed over the hyper-link.</p>
+<p>The hyper-link always starts with the protocol (here <code>http</code>).</p>
+<!-- HTML Images -->
+
+<p>HTML Images are declared with the <code>&lt;img&gt;</code> tag:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;python.jpg&quot;</span><span class="ot"> width=</span><span class="st">&quot;104&quot;</span><span class="ot"> height=</span><span class="st">&quot;142&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Recognise this ?&quot;</span> <span class="kw">/&gt;</span></code></pre>
+<p>The attributes give the image's file name and the screen display size in pixels.</p>
+<p>The <code>alt=</code> attribute specifies the alternative text to be displayed when an image cannot. Note there is no content.</p>
+<!-- Language Attribute -->
+
+<p>The <code>lang=</code> attribute may be added to the <code>&lt;html&gt;</code> element. It declares the language of an HTML document. E.g.:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en-US&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>The first two letters specify the language, the second two, if present, the dialect.</p>
+<p>The language is used by accessibility applications and search engines.</p>
+</body>
+</html>
+
+
