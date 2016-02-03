@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-paragraphs">HTML Paragraphs</h2>
+<hr><!-- Paragraph Elements -->
+
+<p>The <code>&lt;p&gt;</code> element encloses a paragraph.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>A paragraph
+    may consist of
+    many lines.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+A paragraph may consist of many lines.
+</p>
+</div>
+
+<p>A browser will reformat text within a paragraph removing extra lines and spaces.</p>
+<p>Most browsers will display paragraphs correctly if you forget the closing tag. Do not reply on this.</p>
+<hr><!-- Line Breaks -->
+
+<p>The <code>&lt;br&gt;</code> element inserts a line break. Use it when you want a new line without starting a new paragraph.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>A paragraph <span class="kw">&lt;br</span> <span class="kw">/&gt;</span> with a line break.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+A paragraph <br /> with a line break.
+</p>
+</div>
+
+
+<hr><!-- Pre-formatted Text -->
+
+<p>The <code>&lt;pre&gt;</code> element encloses pre-formatted text.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;pre&gt;</span>
+    Pre-formatted  text  with  extra
+    lines  and  spaces.
+    <span class="kw">&lt;/pre&gt;</span></code></pre>
+<div><p>
+will appear as:
+</p>
+<div class=noindent>
+    <pre>
+    Pre-formatted  text  with  extra
+    lines  and  spaces.
+    </pre>
+</div>
+
+<p>A browser will display the text as is, with extra lines and spaces. It may also use a different (fixed width) font.</p>
+<hr />
+
+</body>
+</html>
+
+
