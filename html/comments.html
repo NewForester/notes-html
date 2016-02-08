@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-comments">HTML Comments</h2>
+<hr /><!-- Comments -->
+
+<p>HTML comment tags enclose comments in HTML documents.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>This is a
+    <span class="co">&lt;!--</span>
+<span class="co">    A comment that will not be displayed</span>
+<span class="co">    --&gt;</span>
+    sentence.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+This is a <!--
+    A comment that will not be displayed
+    --> sentence.
+</p>
+</div>
+
+<p>Comments are not displayed: they may be used to document the HTML source code.</p>
+<p>Comments are useful for debugging: they may be used to comment out parts of the document.</p>
+<hr /><!-- Conditional Comments -->
+
+<p>Conditional comments may be browser specific (and not part of the standard).</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="co">&lt;!--[if IE 9]&gt;</span>
+<span class="co">        .... some HTML here ....</span>
+<span class="co">    &lt;![endif]--&gt;</span></code></pre>
+<hr />
+
+</body>
+</html>
+
+
