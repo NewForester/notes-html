@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-colours">HTML Colours</h2>
+<p>HTML colours may be specified any one of three ways.</p>
+<hr /><!-- Colours by Name -->
+
+<p>HTML supports 140 standard colour names. See <a href="http://www.w3schools.com/colors/colors_names.asp">http://www.w3schools.com/colors/colors_names.asp</a>.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:red&quot;</span><span class="kw">&gt;</span>
+    A red background
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:orange&quot;</span><span class="kw">&gt;</span>
+    An orange background
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:yellow&quot;</span><span class="kw">&gt;</span>
+    A yellow background
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:blue;color:white&quot;</span><span class="kw">&gt;</span>
+    A blue background
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:cyan&quot;</span><span class="kw">&gt;</span>
+    A cyan background
+    <span class="kw">&lt;/h4&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h4 style="background-color:red">
+    
+A red background
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:orange">
+    
+An orange background
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:yellow">
+    
+A yellow background
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:blue;color:white">
+    
+A blue background
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:cyan">
+    
+A cyan background
+</h4>
+</div>
+
+
+<hr /><!-- Colours by RGB Value -->
+
+<p>Colour may be given as an <abbr title="Red Green Blue">RGB</abbr> value.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(255,0,0)&quot;</span><span class="kw">&gt;</span>
+    Background set to red with rgb(255,0,0)
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(0,255,0)&quot;</span><span class="kw">&gt;</span>
+    Background set to green with rgb(0,255,0)
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(0,0,255);color:white&quot;</span><span class="kw">&gt;</span>
+    Background set to blue with rgb(0,0,255)
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(255,255,0)&quot;</span><span class="kw">&gt;</span>
+    Background set to yellow with rgb(255,255,0)
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(255,0,255)&quot;</span><span class="kw">&gt;</span>
+    Background set to magenta with rgb(255,0,255)
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:rgb(0,255,255)&quot;</span><span class="kw">&gt;</span>
+    Background set to cyan with rgb(0,255,255)
+    <span class="kw">&lt;/h4&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h4 style="background-color:rgb(255,0,0)">
+    
+Background set to red with rgb(255,0,0)
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:rgb(0,255,0)">
+    
+Background set to green with rgb(0,255,0)
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:rgb(0,0,255);color:white">
+    
+Background set to blue with rgb(0,0,255)
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:rgb(255,255,0)">
+    
+Background set to yellow with rgb(255,255,0)
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:rgb(255,0,255)">
+    
+Background set to magenta with rgb(255,0,255)
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:rgb(0,255,255)">
+    
+Background set to cyan with rgb(0,255,255)
+</h4>
+</div>
+
+
+<hr /><!-- Colours by Hex Value -->
+
+<p>Colour may be given as a 6-digit hex value.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#FF0000&quot;</span><span class="kw">&gt;</span>
+    Background set to red using #FF0000
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#00FF00&quot;</span><span class="kw">&gt;</span>
+    Background set to green using #00FF00
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#0000FF;color:white&quot;</span><span class="kw">&gt;</span>
+    Background set to blue using #0000FF
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#FFFF00&quot;</span><span class="kw">&gt;</span>
+    Background set to yellow using #FFFF00
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#FF00FF&quot;</span><span class="kw">&gt;</span>
+    Background set to magenta using #FF00FF
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#00FFFF&quot;</span><span class="kw">&gt;</span>
+    Background set to cyan using #00FFFF
+    <span class="kw">&lt;/h4&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h4 style="background-color:#FF0000">
+    
+Background set to red using #FF0000
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#00FF00">
+    
+Background set to green using #00FF00
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#0000FF;color:white">
+    
+Background set to blue using #0000FF
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#FFFF00">
+    
+Background set to yellow using #FFFF00
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#FF00FF">
+    
+Background set to magenta using #FF00FF
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#00FFFF">
+    
+Background set to cyan using #00FFFF
+</h4>
+</div>
+
+
+<hr /><!-- Grey Scale -->
+
+<p>Shades of grey are often defined using equal values for the three primary colours:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#000000;color:white&quot;</span><span class="kw">&gt;</span>
+    Background set by using #000000
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#404040;color:white&quot;</span><span class="kw">&gt;</span>
+    Background set by using #404040
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#808080;color:white&quot;</span><span class="kw">&gt;</span>
+    Background set by using #808080
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#CCCCCC;&quot;</span><span class="kw">&gt;</span>
+    Background set by using #CCCCCC
+    <span class="kw">&lt;/h4&gt;</span>
+
+    <span class="kw">&lt;h4</span><span class="ot"> style=</span><span class="st">&quot;background-color:#FFFFFF;&quot;</span><span class="kw">&gt;</span>
+    Background set by using #FFFFFF
+    <span class="kw">&lt;/h4&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h4 style="background-color:#000000;color:white">
+    
+Background set by using #000000
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#404040;color:white">
+    
+Background set by using #404040
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#808080;color:white">
+    
+Background set by using #808080
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#CCCCCC;">
+    
+Background set by using #CCCCCC
+</h4>
+</div>
+<div class=indent>
+    <h4 style="background-color:#FFFFFF;">
+    
+Background set by using #FFFFFF
+</h4>
+</div>
+
+<hr />
+
+</body>
+</html>
+
+
