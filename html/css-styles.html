@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h4      {color: red;}
+
+        #p01  {
+            color: red;
+            font-family: courier;
+            font-size: 160%;
+        }
+        p.surrounded {
+            border: 1px solid powderblue;
+            padding: 30px;
+            margin: 50px;
+        }
+    </style>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" /> <link rel="stylesheet" href="../styles/css-styles.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-styles---css">HTML Styles - CSS</h2>
+<p>CSS (Cascading Style Sheets) describe how HTML elements are to be rendered (on screen, paper or other media). It is covered in detail in the <a href="http://www.w3schools.com/css/default.asp">CSS Tutorial</a>. Since one style sheet can apply to many elements on many web pages, it can save a lot of work.</p>
+<p>CSS styles can be applied to an element:</p>
+<ol style="list-style-type: decimal">
+<li>inline - using the style attribute of a single HTML element</li>
+<li>internal - using the <code>&lt;style&gt;</code> element in the <code>&lt;head&gt;</code> section of an HTML document</li>
+<li>external - using a CSS style sheet (often across all pages of a web site)</li>
+</ol>
+<hr /><!-- Inline CSS -->
+
+<p>Inline CSS is used to apply a unique style to a single HTML element by using the <code>style=</code> attribute of the element.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h3</span><span class="ot"> style=</span><span class="st">&quot;color:blue;&quot;</span><span class="kw">&gt;</span>This is a Blue Heading<span class="kw">&lt;/h3&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h3 style="color:blue;">
+A Blue Heading
+</h3>
+</div>
+
+
+<hr /><!-- Internal CSS -->
+
+<p>Internal CSS is used to define a style for a single HTML page using the <code>&lt;style&gt;</code> element in the <code>&lt;head&gt;</code> section of a page.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;head&gt;</span>
+        <span class="kw">&lt;style&gt;</span>
+            h4      <span class="kw">{color:</span> <span class="dt">red</span><span class="kw">;}</span>
+        <span class="kw">&lt;/style&gt;</span>
+    <span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+        <span class="kw">&lt;h4&gt;</span>A Red Heading<span class="kw">&lt;/h4&gt;</span>
+    <span class="kw">&lt;/body&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h4>
+A Red Heading
+</h4>
+</div>
+</div>
+
+
+<hr /><!-- External CSS -->
+
+<p>An external style sheet is used to define the style for many HTML pages by using the <code>&lt;link&gt;</code> element in the <code>&lt;head&gt;</code> section of a page. The appearance of an entire web site can be defined in a single file.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;head&gt;</span>
+        <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;css-styles.css&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+        <span class="kw">&lt;h5&gt;</span>A Green Heading<span class="kw">&lt;/h5&gt;</span>
+    <span class="kw">&lt;/body&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h5>
+A Green Heading
+</h5>
+</div>
+
+<p>The style sheet &quot;css-styles.css&quot; will contain (at least):</p>
+<pre class="sourceCode html"><code class="sourceCode html">    h5      {color: green;}</code></pre>
+<p>External style sheets can be referenced using a full URL or a <a href="file-paths.html">relative file path</a>.</p>
+<hr />
+
+
+<h2 id="html-styles-and-css-properties">HTML Styles and CSS Properties</h2>
+<!-- CSS Properties -->
+
+<p>There are many CSS properties. Here are some of those used most often.</p>
+<ol style="list-style-type: decimal">
+<li>color - defines the text color;</li>
+<li>font-family - defines the text font;</li>
+<li>font-size - defines the text size;</li>
+<li>border - defines a border around an element:</li>
+<li>padding - defines a padding (space) between text and the border:</li>
+<li>margin - defines a margin (space) outside the border:</li>
+</ol>
+<hr /><!-- The id attribute -->
+
+<p>The <code>id=</code> attribute may be used to apply a specific style set to one element. The intention is that an element id is unique within a page.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    #p01  {
+        color: red;
+        font-family: courier;
+        font-size: 160%;
+    }</code></pre>
+<p>
+Then
+</p>
+
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;p01&quot;</span><span class="kw">&gt;</span>I am different<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p id="p01">
+I am different
+</p>
+</div>
+
+
+<hr /><!-- The class attribute -->
+
+<p>The <code>class=</code> attribute may be used to apply a specific style set to a set of elements.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    p.surrounded {
+        border: 1px solid powderblue;
+        padding: 30px;
+        margin: 50px;
+    }</code></pre>
+<p>
+Then
+</p>
+
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;surrounded&quot;</span><span class="kw">&gt;</span>Help ! Get me out of here !<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=noindent>
+    <p class="surrounded">
+Help ! Get me out of here !
+</p>
+</div>
+
+<hr />
+
+</body>
+</html>
+
+
