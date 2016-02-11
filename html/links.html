@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-links">HTML Links</h2>
+<p>Hyper-links (aka links) are what make the web a web. Navigating from page to page is as simple a clicking on a link. Although a web pages is not required to have links, almost all of them do.</p>
+<p>Links are most often text but may be an image or any HTML element. The text is usually underlined to indicate the link is there.</p>
+<p>When you move the mouse over a link, the mouse 'arrow' will change shape to indicate you can now click to follow the link. Usually the 'arrow' changes into a small hand.</p>
+<hr /><!-- Link Syntax -->
+
+<p>The <code>&lt;a&gt;</code> (anchor) element defines a hyper-link. The general form for link with text is:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;url&quot;</span><span class="kw">&gt;</span>link text<span class="kw">&lt;/a&gt;</span></code></pre>
+<p>An example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;https://www.python.org/&quot;</span><span class="kw">&gt;</span>The Python Software Foundation<span class="kw">&lt;/a&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<a href="https://www.python.org/">The Python Software Foundation</a> <br />
+</div>
+
+<p>The link address:</p>
+<ol style="list-style-type: decimal">
+<li>is given by the <code>href=</code> attribute (https://www.python.org/);</li>
+<li>may be a full URL or a <a href="file-paths.html">relative file path</a>;</li>
+<li>without a forward slash may result in two browser requests being sent to the server.</li>
+</ol>
+<p>The link text:</p>
+<ol style="list-style-type: decimal">
+<li>is the visible part (The Python Software Foundation);</li>
+<li>is the active part that will send you to the link address when clicked;</li>
+<li>is usually displayed in a different colour from ordinary text.</li>
+</ol>
+<hr /><!-- Link Colours -->
+
+<p>The link text is displayed in different colours. By default:</p>
+<ol style="list-style-type: decimal">
+<li>blue - an unvisited link</li>
+<li>purple - a visited link</li>
+<li>red - the active link</li>
+</ol>
+<p>The default colours can be overridden using styles:</p>
+<pre class="sourceCode html"><code class="sourceCode html">   <span class="kw">&lt;style&gt;</span>
+       a<span class="dv">:link</span>    <span class="kw">{color:</span><span class="dt">green</span><span class="kw">;</span>  <span class="kw">background-color:</span><span class="dt">transparent</span><span class="kw">;</span> <span class="kw">text-decoration:</span><span class="dt">none</span><span class="kw">}</span>
+       a<span class="dv">:visited</span> <span class="kw">{color:</span>pink<span class="kw">;</span>   <span class="kw">background-color:</span><span class="dt">transparent</span><span class="kw">;</span> <span class="kw">text-decoration:</span><span class="dt">none</span><span class="kw">}</span>
+       a<span class="dv">:hover</span>   <span class="kw">{color:</span><span class="dt">red</span><span class="kw">;</span>    <span class="kw">background-color:</span><span class="dt">transparent</span><span class="kw">;</span> <span class="kw">text-decoration:</span><span class="dt">underline</span><span class="kw">}</span>
+       a<span class="dv">:active</span>  <span class="kw">{color:</span><span class="dt">yellow</span><span class="kw">;</span> <span class="kw">background-color:</span><span class="dt">transparent</span><span class="kw">;</span> <span class="kw">text-decoration:</span><span class="dt">underline</span><span class="kw">}</span>
+   <span class="kw">&lt;/style&gt;</span></code></pre>
+<hr /><!-- Link Target -->
+
+<p>The <code>target=</code> attribute specifies where in the browser the web page addressed by the hyper-link should be opened.</p>
+<ol style="list-style-type: decimal">
+<li>_blank - open in a new window/tab</li>
+<li>_self - open in the same window/tab as it was clicked (the default)</li>
+<li>_parent - open in the parent frame</li>
+<li>_top - open in the full body of the window</li>
+<li>frame-name - open in a named frame</li>
+</ol>
+<p>This example will open the linked document in a new browser window/tab:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;https://www.python.org/&quot;</span><span class="ot"> target=</span><span class="st">&quot;_blank&quot;</span><span class="kw">&gt;</span>The Python Software Foundation<span class="kw">&lt;/a&gt;</span></code></pre>
+<p><!-- Quoi ? --> Use <code>target=&quot;_top&quot;</code> to break out of the frame when your web page is locked in a frame.</p>
+<hr /><!-- Images as Links -->
+
+<p>It is common to use images as links:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;default.asp&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;../images/smiley.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Smily Face&quot;</span><span class="ot"> style=</span><span class="st">&quot;width:42px;height:42px;border:0;&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/a&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<a href="default.asp"> <img src="../images/smiley.gif" alt="Smily Face" style="width:42px;height:42px;border:0;"> </a> <br />
+</div>
+
+<p>The <code>border:0;</code> prevents Internet Explorer (9 and earlier) displaying a border around the image-as-a-link.</p>
+<hr /><!-- Link Bookmarks -->
+
+<p>HTML bookmarks allow readers to jump to specific parts of a web page. Any HTML element can be a bookmark but usually bookmarks are headings.</p>
+<p>The <code>id=</code> attribute is used to define a bookmark:</p>
+<pre class="hmtl"><code>    &lt;h2 id=&quot;biblio&quot;&gt;Bibliography&lt;/h2&gt;</code></pre>
+<p>To reference the bookmark from this page:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#biblio&quot;</span><span class="kw">&gt;</span>Visit the Bibliography<span class="kw">&lt;/a&gt;</span></code></pre>
+<p>To reference the bookmark from another page:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;biblio.html#biblio&quot;</span><span class="kw">&gt;</span>Visit the Bibliography<span class="kw">&lt;/a&gt;</span></code></pre>
+<hr />
+
+</body>
+</html>
+
+
