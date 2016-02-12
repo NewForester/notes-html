@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-images">HTML Images</h2>
+<p>Images are a significant part of many web pages.</p>
+<p>Common image formats are JPG, GIF and PNG. GIF images may be animated (but that makes no difference to the HTML source).</p>
+<hr /><!-- Image Syntax -->
+
+<p>The <code>&lt;img&gt;</code> element defines an image. The element is empty: it has no text content. The general form is:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;url&quot;</span><span class="ot"> alt=</span><span class="st">&quot;some_text&quot;</span><span class="ot"> style=</span><span class="st">&quot;width:width;height:height;&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>The <code>alt=</code> attribute is required. It provides the alternative text for an image. This is rendered if the image cannot be loaded but is also for use by screen readers used by the visually impaired.</p>
+<p>The <code>src=</code> attribute specifies the address of the image. As with other Internet addresses, it may be a full URL or a <a href="file-paths.html">relative file path</a>.</p>
+<hr /><!-- Image Size -->
+
+<p>The image size should always be specified otherwise the page may flicker while the image is being loaded.</p>
+<p>The <code>style=</code> attribute may be used to specify the image size.</p>
+<pre class="hmtl"><code>    &lt;img src=&quot;html5.gif&quot; alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;</code></pre>
+<p>The size is specified in pixels. Browsers appear to scale (not crop) images.</p>
+<p>The image size may alternatively be specified using the <code>width=</code> and <code>height=</code> attributes.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;html5.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;HTML5 Icon&quot;</span><span class="ot"> width=</span><span class="st">&quot;128&quot;</span><span class="ot"> height=</span><span class="st">&quot;128&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>It is recommend the <code>style=</code> attribute is used to avoid internal or external styles overriding the desired image size.</p>
+<hr /><!-- Floating Images -->
+
+<p>Images can float either side of text.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>
+        <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;../images/smiley.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Smile&quot;</span><span class="ot"> style=</span><span class="st">&quot;float:right;width:42px;height:42px;border:0;&quot;</span><span class="kw">&gt;</span>
+        A smile to my right.
+    <span class="kw">&lt;/p&gt;</span>
+
+    <span class="kw">&lt;p&gt;</span>
+        <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;../images/smiley.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Smile&quot;</span><span class="ot"> style=</span><span class="st">&quot;float:left;width:42px;height:42px;border:0;&quot;</span><span class="kw">&gt;</span>
+        A smile to my left.
+    <span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+        
+<img src="../images/smiley.gif" alt="Smile" style="float:right;width:42px;height:42px;border:0;"> A smile to my right.
+</p>
+    
+<br />
+</div>
+<div class=indent>
+    <p>
+        
+<img src="../images/smiley.gif" alt="Smile" style="float:left;width:42px;height:42px;border:0;"> A smile to my left.
+</p>
+    
+<br />
+</div>
+
+
+<hr /><!-- Link Images -->
+
+<p>To use an image as a link, simply nest the <code>&lt;img&gt;</code> element within the <code>&lt;a&gt;</code> element.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;default.asp&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;../images/smiley.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Smile&quot;</span><span class="ot"> style=</span><span class="st">&quot;width:42px;height:42px;border:0;&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/a&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<a href="default.asp"> <img src="../images/smiley.gif" alt="Smile" style="width:42px;height:42px;border:0;"> </a>
+</div>
+
+
+<hr /><!-- Link Maps -->
+
+<p>Use the <code>&lt;map&gt;</code> element to define an image map. This is an image with one or more clickable areas.</p>
+<p>The association between the two is given by the <code>usemap=</code> attribute of the image and the <code>name=</code> attribute of the map.</p>
+<p>The <code>&lt;map&gt;</code> element contains <code>&lt;area&gt;</code> elements each of which defines a clickable area and a hyper-link. For example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;planets.gif&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Planets&quot;</span><span class="ot"> usemap=</span><span class="st">&quot;#planetmap&quot;</span><span class="ot"> style=</span><span class="st">&quot;width:145px;height:126px;&quot;</span><span class="kw">&gt;</span>
+
+    <span class="kw">&lt;map</span><span class="ot"> name=</span><span class="st">&quot;planetmap&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;area</span><span class="ot"> shape=</span><span class="st">&quot;rect&quot;</span><span class="ot"> coords=</span><span class="st">&quot;0,0,82,126&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Sun&quot;</span><span class="ot"> href=</span><span class="st">&quot;sun.htm&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;area</span><span class="ot"> shape=</span><span class="st">&quot;circle&quot;</span><span class="ot"> coords=</span><span class="st">&quot;90,58,3&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Mercury&quot;</span><span class="ot"> href=</span><span class="st">&quot;mercur.htm&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;area</span><span class="ot"> shape=</span><span class="st">&quot;circle&quot;</span><span class="ot"> coords=</span><span class="st">&quot;124,58,8&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Venus&quot;</span><span class="ot"> href=</span><span class="st">&quot;venus.htm&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/map&gt;</span></code></pre>
+<hr />
+
+</body>
+</html>
+
+
