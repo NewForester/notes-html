@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+<style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-tables">HTML Tables</h2>
+<p>The <code>&lt;table&gt;</code> element defines a table. The <code>&lt;tr&gt;</code> elements define table rows.</p>
+<p>The <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> element defines the table headers and data (aka cells). These last two are the data containers of the table may contain text, images, other tables and so on.</p>
+<p>A table may have a <code>&lt;caption&gt;</code> element immediately after the <code>&lt;table&gt;</code> tag before the first <code>&lt;tr&gt;</code> tag:</p>
+<pre class="sourceCode html"><code class="sourceCode html">  <span class="kw">&lt;table</span><span class="ot"> style=</span><span class="st">&quot;width:100%&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;caption&gt;</span>Monthly savings<span class="kw">&lt;/caption&gt;</span>
+    <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;th&gt;</span>Month<span class="kw">&lt;/th&gt;</span>
+      <span class="kw">&lt;th&gt;</span>Savings<span class="kw">&lt;/th&gt;</span>
+    <span class="kw">&lt;/tr&gt;</span>
+    <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;td&gt;</span>January<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>£ 100<span class="kw">&lt;/td&gt;</span>
+    <span class="kw">&lt;/tr&gt;</span>
+    <span class="kw">&lt;tr&gt;</span>
+      <span class="kw">&lt;td&gt;</span>February<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;td&gt;</span>£ 50<span class="kw">&lt;/td&gt;</span>
+    <span class="kw">&lt;/tr&gt;</span>
+  <span class="kw">&lt;/table&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+  <table style="width:100%">
+    
+<caption>Monthly savings</caption>
+<tr>
+      <th>
+Month
+</th>
+      <th>
+Savings
+</th>
+    </tr>
+    <tr>
+      <td>
+January
+</td>
+      <td>
+£ 100
+</td>
+    </tr>
+    <tr>
+      <td>
+February
+</td>
+      <td>
+/£ 50
+</td>
+    </tr>
+  </table>
+</div>
+
+
+<hr /><!-- Table Borders -->
+
+<p>By default, the elements of a table have no borders.</p>
+<p>Use the border property to define borders for both the table and the table cells. This gives what appears to be a double border.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }</code></pre>
+<p>Use the border-collapse property for a border between cells instead of a border around cells.</p>
+<p>The border-spacing property specifies the distance between the double borders:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    table {
+        border-spacing: 5px;
+    }
+    th, td {
+        padding: 15px;
+    }
+    th {
+        text-align: left;
+    }</code></pre>
+<p>Contrast spacing with the padding property which specifies the distance between the border and cell contents.</p>
+<p>By default, the contents of <code>&lt;td&gt;</code> elements are left aligned but those of <code>&lt;th&gt;</code> elements are centred and bold.</p>
+<hr /><!-- Spanning -->
+
+<p>Individual cells may span columns:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;table</span><span class="ot"> style=</span><span class="st">&quot;width:100%&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;tr&gt;</span>
+        <span class="kw">&lt;th&gt;</span>Name<span class="kw">&lt;/th&gt;</span>
+        <span class="kw">&lt;th</span><span class="ot"> colspan=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Extension:<span class="kw">&lt;/th&gt;</span>
+      <span class="kw">&lt;/tr&gt;</span>
+      <span class="kw">&lt;tr&gt;</span>
+        <span class="kw">&lt;td&gt;</span>Peter Perfect<span class="kw">&lt;/td&gt;</span>
+        <span class="kw">&lt;td&gt;</span>77854<span class="kw">&lt;/td&gt;</span>
+        <span class="kw">&lt;td&gt;</span>77855<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;/tr&gt;</span>
+    <span class="kw">&lt;/table&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <table style="width:100%">
+      <tr>
+        <th>
+Name
+</th>
+        <th colspan="2">
+Extension:
+</th>
+      </tr>
+      <tr>
+        <td>
+Peter Perfect
+</td>
+        <td>
+77854
+</td>
+        <td>
+77855
+</td>
+      </tr>
+    </table>
+</div>
+
+<p>Individual cells may span rows:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;table</span><span class="ot"> style=</span><span class="st">&quot;width:100%&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;tr&gt;</span>
+        <span class="kw">&lt;th&gt;</span>Name:<span class="kw">&lt;/th&gt;</span>
+        <span class="kw">&lt;td&gt;</span>Peter Perfect<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;/tr&gt;</span>
+      <span class="kw">&lt;tr&gt;</span>
+        <span class="kw">&lt;th</span><span class="ot"> rowspan=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>Extension:<span class="kw">&lt;/th&gt;</span>
+        <span class="kw">&lt;td&gt;</span>77854<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;/tr&gt;</span>
+      <span class="kw">&lt;tr&gt;</span>
+        <span class="kw">&lt;td&gt;</span>77855<span class="kw">&lt;/td&gt;</span>
+      <span class="kw">&lt;/tr&gt;</span>
+    <span class="kw">&lt;/table&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <table style="width:100%">
+      <tr>
+        <th>
+Name:
+</th>
+        <td>
+Peter Perfect
+</td>
+      </tr>
+      <tr>
+        <th rowspan="2">
+Extension:
+</th>
+        <td>
+77854
+</td>
+      </tr>
+      <tr>
+        <td>
+77855
+</td>
+      </tr>
+    </table>
+</div>
+
+
+<hr /><!-- Styles of Individual Tables -->
+
+<p>To declare styles of an individual table, use the <code>id=</code> attribute on the <code>&lt;table&gt;</code> tag and define the styles thus:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    table#t01 {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+
+    table#t01 th {
+        color: white;
+        background-color: black;
+    }</code></pre>
+<p>Alternate rows may be given different properties thus:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }</code></pre>
+<hr />
+
+</body>
+</html>
+
+
