@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-lists">HTML Lists</h2>
+<p>HTML defines three types of list:</p>
+<ol style="list-style-type: decimal">
+<li>unordered lists;</li>
+<li>ordered lists;</li>
+<li>description lists.</li>
+</ol>
+<p>List items can contain other HTML elements, not just text. A nested list is list item that is, itself, a list element.</p>
+<hr /><!-- Unordered Lists -->
+
+<p>The <code>&lt;ul&gt;</code> element defines an unordered list. The <code>&lt;li&gt;</code> element defines individual list items.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;ul&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Orange<span class="kw">&lt;/li&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Apple<span class="kw">&lt;/li&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Banana<span class="kw">&lt;/li&gt;</span>
+    <span class="kw">&lt;/ul&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <ul>
+      <li>
+Orange
+</li>
+      <li>
+Apple
+</li>
+      <li>
+Banana
+</li>
+    </ul>
+</div>
+
+<p>The <code>list-style-type</code> property may be used to specify an alternative marker for list items.</p>
+<ol style="list-style-type: decimal">
+<li>disc - bullet marker (the default)</li>
+<li>circle - circle marker</li>
+<li>square - a black square</li>
+<li>none - no marker</li>
+</ol>
+<hr /><!-- Ordered Lists -->
+
+<p>The <code>&lt;ol&gt;</code> element defines an ordered list. List items are numbered.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;ol&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Orange<span class="kw">&lt;/li&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Apple<span class="kw">&lt;/li&gt;</span>
+      <span class="kw">&lt;li&gt;</span>Banana<span class="kw">&lt;/li&gt;</span>
+    <span class="kw">&lt;/ol&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <ol>
+      <li>
+Orange
+</li>
+      <li>
+Apple
+</li>
+      <li>
+Banana
+</li>
+    </ol>
+</div>
+
+<p>The <code>type=</code> attribute may be used to specify alternative numbering for list items.</p>
+<ol style="list-style-type: decimal">
+<li>type=&quot;1&quot; - numbers (the default)</li>
+<li>type=&quot;A&quot; - uppercase letters (A, B, ...)</li>
+<li>type=&quot;a&quot; - lowercase letters (a, b, ...)</li>
+<li>type=&quot;I&quot; - uppercase Roman numerals (I, II, ...)</li>
+<li>type=&quot;i&quot; - lowercase Roman numerals (i, ii, ...)</li>
+</ol>
+<hr /><!-- Description Lists -->
+
+<p>The <code>&lt;dl&gt;</code> element defines an description list.</p>
+<p>It is a list of terms with a description for each. The <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements define terms and descriptions respectively.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;dl&gt;</span>
+      <span class="kw">&lt;dt&gt;</span>Orange<span class="kw">&lt;/dt&gt;</span>
+      <span class="kw">&lt;dd&gt;</span>a citrus fruit<span class="kw">&lt;/dd&gt;</span>
+      <span class="kw">&lt;dt&gt;</span>Banana<span class="kw">&lt;/dt&gt;</span>
+      <span class="kw">&lt;dd&gt;</span>a tropical fruit<span class="kw">&lt;/dd&gt;</span>
+    <span class="kw">&lt;/dl&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <dl>
+      <dt>
+Orange
+</dt>
+      <dd>
+a citrus fruit
+</dd>
+      <dt>
+Banana
+</dt>
+      <dd>
+a tropical fruit
+</dd>
+    </dl>
+</div>
+
+
+<hr /><!-- Horizontal Lists -->
+
+<p>CCS styles can be used to style lists in many different ways. A common example is to list elements horizontally and turn list items into a selection menu.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;head&gt;</span>
+      <span class="kw">&lt;style&gt;</span>
+        ul <span class="kw">{</span>
+            <span class="kw">list-style-type:</span> <span class="dt">none</span><span class="kw">;</span>
+            <span class="kw">margin:</span> <span class="dt">0</span><span class="kw">;</span>
+            <span class="kw">padding:</span> <span class="dt">0</span><span class="kw">;</span>
+            <span class="kw">overflow:</span> <span class="dt">hidden</span><span class="kw">;</span>
+            <span class="kw">background-color:</span> <span class="dt">#333333</span><span class="kw">;</span>
+        <span class="kw">}</span>
+
+        li <span class="kw">{</span>
+            <span class="kw">float:</span> <span class="dt">left</span><span class="kw">;</span>
+        <span class="kw">}</span>
+
+        li a <span class="kw">{</span>
+            <span class="kw">display:</span> <span class="dt">block</span><span class="kw">;</span>
+            <span class="kw">color:</span> <span class="dt">white</span><span class="kw">;</span>
+            <span class="kw">text-align:</span> <span class="dt">center</span><span class="kw">;</span>
+            <span class="kw">padding:</span> <span class="dt">16px</span><span class="kw">;</span>
+            <span class="kw">text-decoration:</span> <span class="dt">none</span><span class="kw">;</span>
+        <span class="kw">}</span>
+
+        li a<span class="dv">:hover</span> <span class="kw">{</span>
+            <span class="kw">background-color:</span> <span class="dt">#111111</span><span class="kw">;</span>
+        <span class="kw">}</span>
+      <span class="kw">&lt;/style&gt;</span>
+    <span class="kw">&lt;/head&gt;</span>
+
+    <span class="kw">&lt;body&gt;</span>
+      <span class="kw">&lt;ul&gt;</span>
+        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#home&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#news&quot;</span><span class="kw">&gt;</span>News<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#contact&quot;</span><span class="kw">&gt;</span>Contact<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="kw">&lt;li&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;#about&quot;</span><span class="kw">&gt;</span>About<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="kw">&lt;/ul&gt;</span>
+    <span class="kw">&lt;/body&gt;</span></code></pre>
+<hr />
+
+</body>
+</html>
+
+
