@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-container-elements">HTML Container Elements</h2>
+<p>HTML elements are either block level or they are in-line.</p>
+<p>Block level elements always begin on a new line and are full width. Examples are headings and paragraphs.</p>
+<p>In-line elements do not start a new line and take up no more width than necessary. Examples are links and images.</p>
+<hr /><!-- Containers -->
+
+<p>The <code>&lt;div&gt;</code> element is a container for block elements and their contents. It has no required attributes but any it does have are applied to its contents. It is often used to apply style attributes from a CSS style sheet to blocks of content.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">style=</span><span class="er">&quot;border:</span> <span class="er">1px</span><span class="ot"> solid limegreen</span><span class="er">;&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;h2&gt;</span>The Importance of Being Earnest<span class="kw">&lt;/h2&gt;</span>
+      <span class="kw">&lt;p&gt;</span>In your own words but not more than 300.<span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;/div&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <div style="border: 1px solid limegreen;">
+      <h2>
+The Importance of Being Earnest
+</h2>
+      <p>
+In your own words but not more than 300.
+</p>
+    </div>
+</div>
+
+
+<hr /><!-- Spans -->
+
+<p>The <code>&lt;span&gt;</code> element is a container for in-line elements and text. It also has no required attributes but <code>style=</code> and <code>class=</code> are common. It ensures a block of text has a consistent style without repetition.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h2&gt;</span>The <span class="kw">&lt;span</span><span class="ot"> style=</span><span class="st">&quot;border: 1px solid limegreen;&quot;</span><span class="kw">&gt;</span>Importance of<span class="kw">&lt;/span&gt;</span> Being Earnest<span class="kw">&lt;/h2&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <h2>
+The <span style="border: 1px solid limegreen;">Importance of</span> Being Earnest
+</h2>
+</div>
+
+<hr />
+
+</body>
+</html>
+
+
