@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+<style>
+      span.note {
+        font-size: 120%;
+        color: red;
+      }
+    </style>
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="css-classes">CSS Classes</h2>
+<p>The <code>class=</code> attribute can be used to ensure elements have the same style without repetition.</p>
+<p>For example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    div.cities {
+      background-color: black;
+      color: white;
+      margin: 20px 0 20px 0;
+      padding: 20px;
+    }</code></pre>
+<p>defines a style class to be applied to all <code>&lt;div&gt;</code> elements with the <code>class=&quot;cities&quot;</code> attribute.</p>
+<p>In-line elements can also use the <code>class=</code> attribute: For example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    span.note {
+      font-size: 120%;
+      color: red;
+    }</code></pre>
+<p>might be used thus:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;h1&gt;</span>My <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;note&quot;</span><span class="kw">&gt;</span>Important<span class="kw">&lt;/span&gt;</span> Heading<span class="kw">&lt;/h1&gt;</span>
+    <span class="kw">&lt;p&gt;</span>This is some <span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;note&quot;</span><span class="kw">&gt;</span>important<span class="kw">&lt;/span&gt;</span> text.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+and would appear as:
+</p>
+<div class=indent>
+    <h1>
+My <span class="note">Important</span> Heading
+</h1>
+    <p>
+This is some <span class="note">important</span> text.
+</p>
+</div>
+
+<p>A style class may be restricted to a particular element type (as above) or may be applied to any element by omitting the type from the definition:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    .note {
+      font-size: 120%;
+      color: red;
+    }</code></pre>
+<hr />
+
+</body>
+</html>
+
+
