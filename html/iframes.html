@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-iframes">HTML Iframes</h2>
+<p>An <code>&lt;iframe&gt;</code> element is used to display a web page within a web page. It in-lines a web page within a frame.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;URL&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></code></pre>
+<p>the <code>src=</code> attribute specifies the Interet address of the page to in-line, which may be a full URL or a <a href="file-paths.html">relative file path</a>.</p>
+<p>The <code>height=</code> and <code>width=</code> attributes may used to specify the dimensions of the <code>&lt;iframe&gt;</code> element. These are in pixels by default but can also be specified in percent.</p>
+<p>An <code>&lt;iframe&gt;</code> element has a border by default. This can be removed or given a different style using the CSS <code>border:</code> property with the <code>style=</code> attribute. For example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://en.wikipedia.org/wiki/&quot;</span><span class="ot"> height=</span><span class="st">&quot;200&quot;</span><span class="ot"> width=</span><span class="st">&quot;600&quot;</span><span class="ot"> style=</span><span class="st">&quot;border:2px solid blue;&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <iframe src="https://en.wikipedia.org/wiki/" height="200" width="600" style="border:2px solid blue;"></iframe>
+</div>
+
+
+<hr /><!-- An <iframe> as a link target -->
+
+<p>An <code>&lt;iframe&gt;</code> element can be the target of a link. Clicking on the link will display the target page in the <code>&lt;iframe&gt;</code> element.</p>
+<p>There is an implicit connection between the <code>target=</code> attribute of the link and the <code>name=</code> attribute of the frame.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://en.wikipedia.org/wiki/&quot;</span><span class="ot"> height=</span><span class="st">&quot;200&quot;</span><span class="ot"> width=</span><span class="st">&quot;600&quot;</span><span class="ot"> name=</span><span class="st">&quot;gnu_frame&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span>
+
+    <span class="kw">&lt;p&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&quot;https://www.gnu.org/&quot;</span><span class="ot"> target=</span><span class="st">&quot;gnu_frame&quot;</span><span class="kw">&gt;</span>GNU Project Home Page<span class="kw">&lt;/a&gt;&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <iframe src="https://en.wikipedia.org/wiki/" height="200" width="600" name="gnu_frame"></iframe>
+</div>
+<div class=indent>
+    <p>
+<a href="https://www.gnu.org/" height="200" width="600" target="gnu_frame">GNU Project Home Page</a>
+</p>
+</div>
+
+<hr />
+
+</body>
+</html>
+
+
