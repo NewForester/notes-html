@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-scripts">HTML Scripts</h2>
+<p>JavaScript is used to add dynamic and interactive content to web pages. A simple, but common use, is form validation.</p>
+<p>The <code>&lt;script&gt;</code> element is used to delimit a client-side script. In practice, client-side scripts are written in JavaScript.</p>
+<p>The script is either the contents of the <code>&lt;script&gt;</code> element or an external script referenced by the <code>src=</code> attribute using a full URL or a <a href="file-paths.html">relative file path</a>.</p>
+<p>Selection of HTML elements on a web page usually involves:</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">    <span class="kw">document</span>.<span class="fu">getElementById</span>(id)</code></pre>
+<p>where <code>id</code> corresponds to the value of the element's <code>id=</code> attribute.</p>
+<p>A (not exactly dynamic) example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;script&gt;</span>
+        <span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;demo&quot;</span>).<span class="fu">innerHTML</span> = <span class="st">&quot;Hello</span> <span class="st">JavaScript</span>!<span class="st">&quot;</span>;
+    <span class="kw">&lt;/script&gt;</span></code></pre>
+<p>assigns the text &quot;Hello JavaScript!&quot; to the contents of the HTML element with the id &quot;demo&quot;.</p>
+<p>The JavaScript language is covered in more detail in a separate <a href="http://www.w3schools.com/js/default.asp">JavaScript Tutorial</a>.</p>
+<hr /><!-- A Taste of JavaScript -->
+
+<p>JavaScript can change HTML element content:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello JavaScript!&quot;;</code></pre>
+<p>JavaScript can change HTML element styles:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    document.getElementById(&quot;demo&quot;).style.color = &quot;red&quot;;</code></pre>
+<p>JavaScript can change HTML element attributes:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    document.getElementById(&quot;image&quot;).src = &quot;picture.gif&quot;;</code></pre>
+<hr /><!-- The <noscript> Element -->
+
+<p>The <code>&lt;noscript&gt;</code> element is used to provide alternative content for users of browsers with scripts disabled or otherwise not supported.</p>
+<hr /><!-- The <button> Element -->
+
+<p>Here is a quick example of how a <code>&lt;button&gt;</code> element can be used as a trigger to run a JavaScript function to update the web page.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;button</span><span class="ot"> type=</span><span class="st">&quot;button&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;myFunction()&quot;</span><span class="kw">&gt;</span>Click Me!<span class="kw">&lt;/button&gt;</span>
+
+     <span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;demo&quot;</span><span class="kw">&gt;</span>This is a demonstration.<span class="kw">&lt;/p&gt;</span>
+
+    <span class="kw">&lt;script&gt;</span>
+    <span class="kw">function</span> myFunction() {
+       <span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;demo&quot;</span>).<span class="fu">innerHTML</span> = <span class="st">&quot;Hello</span> <span class="st">JavaScript</span>!<span class="st">&quot;</span>;
+    }
+    <span class="kw">&lt;/script&gt;</span></code></pre>
+<hr />
+
+</body>
+</html>
+
+
