@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-head">HTML Head</h2>
+<p>The <code>&lt;head&gt;</code> element is a container for meta-data that is placed after the <code>&lt;html&gt;</code> tag before the <code>&lt;body&gt;</code> tag.</p>
+<p>Meta-data is data about the HTML document that is not displayed on the web page. It includes:</p>
+<ol style="list-style-type: decimal">
+<li><code>&lt;title&gt;</code> - the title of the document;</li>
+<li><code>&lt;base&gt;</code> - the base URL for address and target URLs on the web page;</li>
+<li><code>&lt;meta&gt;</code> - general purpose meta data;</li>
+<li><code>&lt;style&gt;</code> - style information specific to the web page;</li>
+<li><code>&lt;link&gt;</code> - the address of an external CSS style sheet (or similar);</li>
+<li><code>&lt;script&gt;</code> - a client side script;</li>
+</ol>
+<p>The HTML5 standard allows the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags to be omitted. Omitting the <code>&lt;head&gt;</code> tag has been common practice for quite some time. However, W3Schools recommends none of these tags are omitted.</p>
+<hr /><!-- The Title Element -->
+
+<p>The <code>&lt;title&gt;</code> element declares the title of the HTML document. It is required by the standards and provides a title for:</p>
+<ul>
+<li>browser tabs,</li>
+<li>page bookmarks and</li>
+<li>search engine results.</li>
+</ul>
+<p>A simple example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;title&gt;</span>My First Page<span class="kw">&lt;/title&gt;</span></code></pre>
+<hr /><!-- The Base Element -->
+
+<p>The <code>&lt;base&gt;</code> element may be used to define a base URL for all relative paths and targets (and how open them). For example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;base</span><span class="ot"> href=</span><span class="st">&quot;http://www.w3schools.com/images/&quot;</span><span class="ot"> target=</span><span class="st">&quot;_blank&quot;</span> <span class="kw">/&gt;</span></code></pre>
+<hr /><!-- The Meta Element -->
+
+<p>The <code>&lt;meta&gt;</code> element provides general meta-data used by the browsers, search engines and other web services. Examples include:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;description&quot;</span><span class="ot"> content=</span><span class="st">&quot;Free Web tutorials&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;keywords&quot;</span><span class="ot"> content=</span><span class="st">&quot;HTML, CSS, XML, JavaScript&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;author&quot;</span><span class="ot"> content=</span><span class="st">&quot;John Doe&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;meta</span><span class="ot"> http-equiv=</span><span class="st">&quot;refresh&quot;</span><span class="ot"> content=</span><span class="st">&quot;30&quot;</span> <span class="kw">/&gt;</span></code></pre>
+<p>A document may have as many <code>&lt;meta&gt;</code> elements as it needs. There are a limited number of values the <code>name=</code> attribute may take.</p>
+<p>HTML5 introduced a mechanism that allows web designers to take control of the view port using a <code>&lt;meta&gt;</code> element. So that web pages may have a reasonable initial appearance on all devices, it is recommended you include the following by default:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>This instructs the browser to use a reasonable zoom level and use the full width of the screen.</p>
+<hr /><!-- The Style Element -->
+
+<p>The <code>&lt;style&gt;</code> element defines style information used to format this web page. A simple example:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;style&gt;</span>
+      body <span class="kw">{background-colour:</span> powderblue<span class="kw">;}</span>
+    <span class="kw">&lt;/style&gt;</span></code></pre>
+<hr /><!-- The Link Element -->
+
+<p>The <code>&lt;link&gt;</code> element references an external style sheet to be used to format this and other web pages. A web page may have several <code>&lt;link&gt;</code> elements.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;style-sheet.css&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>Potentially this element may reference external files other than just style sheets.</p>
+<hr /><!-- The Script Element -->
+
+<p>The <code>&lt;script&gt;</code> element is used to define a client-side (JavaScript) script. I expect there may be several such elements in the same document. See the <a href="scripts.html">HTML Scripts</a> page.</p>
+<p>The <code>&lt;noscript&gt;</code> element may be used to provide text to be displayed when the browser is not script capable or scripts have been disabled.</p>
+<hr />
+
+</body>
+</html>
+
+
