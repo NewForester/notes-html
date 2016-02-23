@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-encoding">HTML Encoding</h2>
+<p>To display an HTML document correctly, the browser must know which character set (aka encoding) the document uses.</p>
+<p>Early HTML used ASCII character encoding. With only 127 alphanumeric characters, it was adequate for English prose but not much else. The <code>charset=</code> attribute of the <code>&lt;meta&gt;</code> element was used for documents in other languages and character entities were used for special symbols.</p>
+<p>HTML4 uses ISO-8859-1 by default. With 255 characters, it extends ASCII with many of the accented characters required for Western European languages.</p>
+<p>HTML5 uses UTF-8 by default, which is a Unicode encoding. It can encode practically any character from any character set.</p>
+<p>UTF-8 is backwards compatible with ISO-8859-1, which is backwards compatible with ASCII.</p>
+<p>UTF-8 is supported by all HTML4 processors so there is little reason these days not to use it.</p>
+<p>Under recent Windows operating systems, you might need to use UTF-16.</p>
+<!-- Declaring the character encoding -->
+
+<p>For HTML5, the default character encoding would be declared as follows:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>For HTML4, the equivalent is:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;meta</span><span class="ot"> http-equiv=</span><span class="st">&quot;Content-Type&quot;</span><span class="ot"> content=</span><span class="st">&quot;text/html;charset=ISO-8859-1&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>When a browser detects this, is probably uses ANSI (Windows-1252) encoding. The ANSI encoding is compatible with ISO-8859-1 but has an extra 32 characters defined.</p>
+<p>See the <a href="http://www.w3schools.com/charsets/default.asp">Complete HTML Character Set Reference</a>.</p>
+<h2 id="html-urls">HTML URLs</h2>
+<p>Uniform Resource Locators (URLs) are web addresses. The (partial) alternative is an IP address.</p>
+<p>They have the syntax:</p>
+<pre class="sourceCode html"><code class="sourceCode html">   protocol://prefix.domain:port/path/filename</code></pre>
+<p>Explanation:</p>
+<ol style="list-style-type: decimal">
+<li>protocol - the Internet protocol (aka service);</li>
+<li>prefix - a domain prefix (default for http is www)</li>
+<li>domain - the Internet domain name (like w3schools.com)</li>
+<li>port - the port number at the host (default for http is 80)</li>
+<li>path - a path at the server (the root directory of the site by default)</li>
+<li>filename - the name of a document or resource</li>
+</ol>
+<p>The better known protocols are:</p>
+<ol style="list-style-type: decimal">
+<li>http - HyperText Transfer Protocol</li>
+<li>https - Secure HyperText Transfer Protocol</li>
+<li>ftp - File Transfer Protocol</li>
+<li>file - a file available through the local operating system</li>
+</ol>
+<hr /><!-- URL Encoding -->
+
+<p>URLs may only be sent over the Internet using the ASCII character set.</p>
+<p>URL encoding converts other characters (and the space) to an ASCII representation that consists of <code>%</code> followed by a pair of hexadecimal digits.</p>
+<p>A space is represented by <code>%20</code> but it is often replaced by a <code>+</code> (plus sign).</p>
+<p>User input will be encoded by the browser as necessary using the character set of the page.</p>
+<p>A UTF-8 code point may require 2 or 3 <code>%</code> double digits. The Euro symbol (<code>€</code>), for example, is encoded as <code>%E2%82%AC</code>.</p>
+<p>For reference, see <a href="http://www.w3schools.com/tags/ref_urlencode.asp">URL Encoding Reference</a>.</p>
+</body>
+</html>
+
+
