@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-forms">HTML Forms</h2>
+<p>The <code>&lt;form&gt;</code> element encloses a form used to collect user data.</p>
+<p>The contents of a form are typically text and special, form specific, elements. The most important of which is the <code>&lt;input&gt;</code> element.</p>
+<p>There are a number of different <code>&lt;input&gt;</code> elements distinguished by the <code>type=</code> attribute. The default is <code>type=text</code>.</p>
+<p>Furthermore, <code>&lt;input&gt;</code> elements have other attributes that are <code>type=</code> specific to some degree.</p>
+<p>HTML5 introduces a large number (compared with the previous standard) of new types and attributes. Support for these among contemporary browsers is still incomplete. An unsupported input type is treated as <code>type=text</code>.</p>
+<p>Some of the new types imply the browser may validate input without script support. Given the complexity of internationalisation, I suspect these are not as universal as might have been intended.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The <code>&lt;form&gt;</code> element encloses a form used to collect user input. The form itself is not, by default, visible.</p>
+<p>The <code>&lt;input&gt;</code> element is the most important of the form specific elements. How the element is displayed depends on its <code>type=</code> attribute.</p>
+<p>The <code>type=text</code> attribute defines a one line field for text input. The default text field width is 20 characters.</p>
+<p>Each input field should have a <code>name=</code> attribute. If the <code>name=</code> attribute is omitted, any data entered into the field will not be submitted.</p>
+<p>Each form needs at least one submit button that, when clicked, submits the data entered by the user to a form handler.</p>
+<p>The form handler is (usually) specified using the <code>action=</code> attribute of the <code>&lt;form&gt;</code> element. It is typically a server page with a script for processing input data.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;form</span><span class="ot"> action=</span><span class="st">&quot;action_page.php&quot;</span><span class="kw">&gt;</span>
+      First name:<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> name=</span><span class="st">&quot;firstname&quot;</span><span class="kw">&gt;&lt;br&gt;</span>
+      Last name:<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> name=</span><span class="st">&quot;lastname&quot;</span><span class="kw">&gt;&lt;br&gt;</span>
+      <span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;submit&quot;</span><span class="ot"> value=</span><span class="st">&quot;Go for it&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/form&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <form action="action_page.php">
+      
+First name:<br> <input type="text" name="firstname"><br> Last name:<br> <input type="text" name="lastname"><br> <br> <input type="submit" value="Go for it">
+</form>
+</div>
+
+<p>The default legend (<code>value=</code>) for the submit button is &quot;Submit Query&quot;.</p>
+<h2 id="html4-form-attributes">HTML4 Form Attributes</h2>
+<p>For HTML4, the attributes for the <code>&lt;form&gt;</code> element are:</p>
+<ol style="list-style-type: decimal">
+<li>accept - file types for file upload (not supported in HTML5);</li>
+<li>accept-charset - charset encoding of the submission;</li>
+<li>action - where to submit the form data;</li>
+<li>enctype - how to (MIME) encode data submitted using POST;</li>
+<li>method - data submission with the HTTP GET or POST methods;</li>
+<li>name - the name of the form;</li>
+<li>target - where to display the response to a submission (_blank etc);</li>
+</ol>
+<!-- The Action Attribute -->
+
+<p>The <code>action=</code> attribute specifies where the form data is sent for processing when the form is submitted. If omitted, the action is set to the current page (whatever than means).</p>
+<!-- The Method Attribute -->
+
+<p>The <code>method=</code> attribute specifies the HTTP method to be used to submit data. The choices are:</p>
+<ul>
+<li>get or</li>
+<li>post</li>
+</ul>
+<p>The default is <code>method=&quot;get&quot;</code>. However, when the form is submitted, the form data is visible in the page address field. This method is only suitable for small amounts of data that are not sensitive.</p>
+<p>Use <code>method=&quot;post&quot;</code> for sensitive (personal, private, confidential) information. It has no size limitations and so can be used for large amounts of data, including file upload.</p>
+<h2 id="html5-form-attributes">HTML5 Form Attributes</h2>
+<p>The <code>&lt;form&gt;</code> element attributes new with HTML5 are:</p>
+<ol style="list-style-type: decimal">
+<li>autocomplete - form auto-completion on or off;</li>
+<li>novalidate - do not validate input before submission;</li>
+</ol>
+<p>The <code>novalidate=</code> attribute specifies the form data should not be validated when submitted. Not validated by whom ? The browser ? Scripts ?</p>
+<p>The <code>autocomplete=</code> attribute specifies whether the browser can suggest completions based on values entered previously. Typically, &quot;on&quot; for the form and &quot;off&quot; for sensitive fields.</p>
+<p>The</p>
+<ul>
+<li>action,</li>
+<li>enctype,</li>
+<li>method,</li>
+<li>novalidate and</li>
+<li>target</li>
+</ul>
+<p>attributes can also be specified with the <code>&lt;input type=submit&gt;</code> where they override the form attribute.</p>
+</body>
+</html>
+
+
