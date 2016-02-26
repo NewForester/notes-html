@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html4-form-elements">HTML4 Form Elements</h2>
+<p>The HTML4 elements that may appear inside a <code>&lt;form&gt;</code> element are:</p>
+<ol style="list-style-type: decimal">
+<li>input - by far the most important;</li>
+<li>label - used to add a label to an <code>&lt;input&gt;</code> element;</li>
+<li>select - used to define drop down lists;</li>
+<li>option - provides <code>&lt;select&gt;</code> (and <code>&lt;datalist&gt;</code>) elements with options to select;</li>
+<li>optgroup - used to group and label <code>&lt;option&gt;</code> elements;</li>
+<li>textarea - used for multi-line input;</li>
+<li>button - used to define additional clickable buttons;</li>
+<li>fieldset - used to group related form elements;</li>
+<li>legend - provides a <code>&lt;fieldset&gt;</code> element with a a caption;</li>
+</ol>
+<p>The <code>&lt;input&gt;</code> element is by far the most important form element. How they are displayed depends on their <code>type=</code> attributes as described on the <a href="forms-input-type.html">Input Types</a> page.</p>
+<hr /><!-- Grouping Form Data -->
+
+<p>The <code>&lt;fieldset&gt;</code> element may be used to group related fields and the <code>&lt;legend&gt;</code> element to give the field set a caption. The browser will draw a box around the field set.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;fieldset&gt;</span>
+      <span class="kw">&lt;legend&gt;</span>Personal information:<span class="kw">&lt;/legend&gt;</span>
+      First name:       <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> name=</span><span class="st">&quot;firstname&quot;</span><span class="ot"> value=</span><span class="st">&quot;Mickey&quot;</span><span class="kw">&gt;&lt;br&gt;</span>
+      Last name:        <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> name=</span><span class="st">&quot;lastname&quot;</span><span class="ot"> value=</span><span class="st">&quot;Mouse&quot;</span><span class="kw">&gt;&lt;br&gt;</span>
+    <span class="kw">&lt;/fieldset&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <fieldset>
+      
+<legend>Personal information:</legend> First name: <input type="text" name="firstname" value="Mickey" ><br> Last name: <input type="text" name="lastname" value="Mouse" ><br>
+</fieldset>
+</div>
+
+
+<hr /><!-- Clickable Buttons -->
+
+<p>Clickable buttons (in addition to the submit and reset buttons) may be defined with the <code>&lt;button&gt;</code> element. The button legend is the element content.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;button</span><span class="ot"> type=</span><span class="st">&quot;button&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;alert(&#39;Hello World!&#39;)&quot;</span><span class="kw">&gt;</span>
+      Click Me!
+    <span class="kw">&lt;/button&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <button type="button" onclick="alert('Hello World!')">
+      
+Click Me! </button>
+</div>
+
+<p>The <code>onclick=</code> attribute defines the action taken when the button is clicked. Presumably this is a script action.</p>
+<hr /><!-- Text Areas -->
+
+<p>A text area is a multi-line input field whose height and width are defined in characters:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;textarea</span><span class="ot"> name=</span><span class="st">&quot;message&quot;</span><span class="ot"> rows=</span><span class="st">&quot;10&quot;</span><span class="ot"> cols=</span><span class="st">&quot;30&quot;</span><span class="kw">&gt;</span>
+      The cat sat on the mat.
+    <span class="kw">&lt;/textarea&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<textarea name="message" rows="3" cols="30"> The cat sat on the mat. </textarea>
+</div>
+
+<p>The element content is displayed in the text area.</p>
+<hr /><!-- Drop Down Lists -->
+
+<p>The <code>&lt;select&gt;</code> element is used, in conjunction with <code>&lt;option&gt;</code> elements, to define a drop-down list. The <code>selected</code> attribute may be used to 'pre-select' an option, otherwise the first option is selected. The <code>&lt;optgroup&gt;</code> element may be used to group options.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;select&gt;</span>
+      <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;Swedish Cars&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;volvo&quot;</span><span class="kw">&gt;</span>Volvo<span class="kw">&lt;/option&gt;</span>
+        <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;saab&quot;</span><span class="kw">&gt;</span>Saab<span class="kw">&lt;/option&gt;</span>
+      <span class="kw">&lt;/optgroup&gt;</span>
+      <span class="kw">&lt;optgroup</span><span class="ot"> label=</span><span class="st">&quot;German Cars&quot;</span><span class="kw">&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;mercedes&quot;</span><span class="kw">&gt;</span>Mercedes<span class="kw">&lt;/option&gt;</span>
+         <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;audi&quot;</span><span class="kw">&gt;</span>Audi<span class="kw">&lt;/option&gt;</span>
+       <span class="kw">&lt;/optgroup&gt;</span>
+    <span class="kw">&lt;/select&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<select> <optgroup label="Swedish Cars"> <option value="volvo">Volvo</option> <option value="saab">Saab</option> </optgroup> <optgroup label="German Cars"> <option value="mercedes">Mercedes</option> <option value="audi">Audi</option> </optgroup> </select>
+</div>
+
+
+<hr /><!-- Input Field Labels -->
+
+<p>The <code>&lt;label&gt;</code> element can be used instead of plain text to provide a field with a label. The <code>for=</code> attribute of the <code>&lt;label&gt;</code> tag must be the same as the <code>id=</code> attribute of the <code>&lt;input&gt;</code> tag.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> id=</span><span class="st">&quot;male&quot;</span><span class="ot"> value=</span><span class="st">&quot;male&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;label</span><span class="ot"> for=</span><span class="st">&quot;male&quot;</span><span class="kw">&gt;</span>Male<span class="kw">&lt;/label&gt;&lt;br&gt;</span>
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> id=</span><span class="st">&quot;female&quot;</span><span class="ot"> value=</span><span class="st">&quot;female&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;label</span><span class="ot"> for=</span><span class="st">&quot;female&quot;</span><span class="kw">&gt;</span>Female<span class="kw">&lt;/label&gt;&lt;br&gt;</span>
+    <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> id=</span><span class="st">&quot;other&quot;</span><span class="ot"> value=</span><span class="st">&quot;other&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;label</span><span class="ot"> for=</span><span class="st">&quot;other&quot;</span><span class="kw">&gt;</span>Other<span class="kw">&lt;/label&gt;&lt;br&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label><br> <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label><br> <input type="radio" name="gender" id="other" value="other"> <label for="other">Other</label><br>
+</div>
+
+<p>The use of the extra field improves usability since the label, not just the radio button, may be clicked.</p>
+<h2 id="html5-form-elements">HTML5 Form Elements</h2>
+<p>The form elements new with HTML5 are:</p>
+<ol style="list-style-type: decimal">
+<li>datalist - used for short drop-down lists with pre-defined choices;</li>
+<li>keygen - used for the generation of a public-private key pair;</li>
+<li>output - used for a derived field perhaps calculated by a script;</li>
+</ol>
+<p>New elements not recognised by older browsers will simply be ignored.</p>
+<p>With <code>&lt;keygen&gt;</code>, the public key is sent to the server while the private key is stored locally. The private key is later used to authenticate the client with the server.</p>
+<p>The <code>&lt;datalist&gt;</code> list element provides a list of values to be used with an <code>&lt;input&gt;</code> element. The two are linked by their <code>id=</code> and <code>list=</code> attributes.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;input</span><span class="ot"> list=</span><span class="st">&quot;browsers&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;datalist</span><span class="ot"> id=</span><span class="st">&quot;browsers&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;Internet Explorer&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;Firefox&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;Chrome&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;Opera&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;option</span><span class="ot"> value=</span><span class="st">&quot;Safari&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/datalist&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<input list="browsers"> <datalist id="browsers"> <option value="Internet Explorer"> <option value="Firefox"> <option value="Chrome"> <option value="Opera"> <option value="Safari"> </datalist>
+</div>
+
+<p>Compare and contrast with the <code>&lt;select&gt;</code> element, which also uses <code>&lt;option&gt;</code> elements.</p>
+</body>
+</html>
+
+
