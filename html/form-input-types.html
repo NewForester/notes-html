@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html4-input-element-types">HTML4 Input Element Types</h2>
+<p>In HTML4, the <code>type=</code> attribute for the <code>&lt;input&gt;</code> element is one of the following:</p>
+<ol style="list-style-type: decimal">
+<li>text - a one-line text input field;</li>
+<li>password - a password field - data entered in masked;</li>
+<li>submit - a button for submitting data entered by the user to a form handler;</li>
+<li>image - an image rather than a button that is used to submit data entered by the user to a form handler;</li>
+<li>reset - a button to clear the form and reset fields to their default values;</li>
+<li>button - a button other that the submit or reset button that performs some other action;</li>
+<li>radio - one of a limited number of choices of which the user may select only one;</li>
+<li>checkbox - one of a limited number of choices of which the user may select more than one or none at all;</li>
+<li>file - a Browse... button that allows one or more files to be selected for upload;</li>
+<li>hidden - a hidden input field (perhaps set or revealed by a script);</li>
+</ol>
+<hr /><!-- The Input Type Button -->
+
+<p>The default legend for the submit and reset buttons is &quot;Submit Query&quot; and &quot;Reset&quot; respectively.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;form&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;button&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;alert(&#39;Hello World!&#39;)&quot;</span><span class="ot"> value=</span><span class="st">&quot;Click Me!&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/form&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <form>
+      
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+</form>
+</div>
+
+
+<hr /><!-- The Radio Button -->
+
+<p>The user can select only one radio button with the same <code>name=</code> attribute.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;form&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> value=</span><span class="st">&quot;male&quot;</span><span class="ot"> checked</span><span class="kw">&gt;</span> Male<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> value=</span><span class="st">&quot;female&quot;</span><span class="kw">&gt;</span> Female<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;radio&quot;</span><span class="ot"> name=</span><span class="st">&quot;gender&quot;</span><span class="ot"> value=</span><span class="st">&quot;other&quot;</span><span class="kw">&gt;</span> Other
+    <span class="kw">&lt;/form&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <form>
+      
+<input type="radio" name="gender" value="male" checked> Male<br> <input type="radio" name="gender" value="female"> Female<br> <input type="radio" name="gender" value="other"> Other
+</form>
+</div>
+
+
+<hr /><!-- The Checkbox -->
+
+<p>The user can select none, one or more check boxes. The <code>name=</code> attribute need not be unique.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;form&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;vehicle1&quot;</span><span class="ot"> value=</span><span class="st">&quot;Bike&quot;</span><span class="kw">&gt;</span> I have a bike<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;vehicle2&quot;</span><span class="ot"> value=</span><span class="st">&quot;Car&quot;</span><span class="kw">&gt;</span> I have a car<span class="kw">&lt;br&gt;</span>
+      <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;checkbox&quot;</span><span class="ot"> name=</span><span class="st">&quot;vehicle3&quot;</span><span class="ot"> value=</span><span class="st">&quot;Plane&quot;</span><span class="kw">&gt;</span> I have a plane<span class="kw">&lt;br&gt;</span>
+    <span class="kw">&lt;/form&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <form>
+      
+<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br> <input type="checkbox" name="vehicle2" value="Car"> I have a car<br> <input type="checkbox" name="vehicle3" value="Plane"> I have a plane<br>
+</form>
+</div>
+
+
+<h2 id="html5-input-element-types">HTML5 Input Element Types</h2>
+<p>The type attributes for the <code>&lt;input&gt;</code> element new with HTML5 are:</p>
+<ol style="list-style-type: decimal">
+<li>color - the browser may pop-up a colour picker;</li>
+<li>date - the browser may pop-up a date picker;</li>
+<li>datetime-local - the browser may pop-up a date/time picker;</li>
+<li>email - the browser may check the e-address entered by the user is well formed;</li>
+<li>month - the browser may pop-up a month + year picker;</li>
+<li>number - data entered must be a number (eventually within range);</li>
+<li>range - the browser may display a slider;</li>
+<li>search - behaves like a regular text field;</li>
+<li>tel - the browser may check the telephone number entered is well formed;</li>
+<li>time - the browser may pop-up a time picker;</li>
+<li>url - the browser may check the URL entered is well formed;</li>
+<li>week - the browser may pop-up a week number + year picker;</li>
+</ol>
+<p>New input types that are not supported by older web browsers will behave as <code>&lt;input type=&quot;text&quot;&gt;</code>. Many of these are intended to allow the browser to do more input validation without the use of scripts.</p>
+<p>The <code>date=</code> attribute may be used in conjunction with <code>min=</code> and <code>max=</code> attributes to set after and before limits.</p>
+<p>The <code>datetime-local=</code> is local in the sense that a time zone cannot be specified. The same goes for <code>time=</code>.</p>
+<p>One difference between <code>number=</code> and <code>range=</code> is the latter should only be used when the exact value is unimportant.</p>
+</body>
+</html>
+
+
