@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<p>Additional attributes may be used to qualify an input field.</p>
+<h2 id="html4-form-input-attributes">HTML4 Form Input Attributes</h2>
+<p>In HTML4, the additional attributes that may be used to qualify an input field are:</p>
+<ol style="list-style-type: decimal">
+<li>value - the default or initial value</li>
+<li>name - the name the input field (submitted with the field value)</li>
+<li>disabled - the field is disabled (it will not be submitted)</li>
+<li>readonly - the field is read only (its value cannot be changed by the user)</li>
+<li>checked - pre-select checkbox or radio button field on page (form) load</li>
+<li>size - the width (in characters) of a (text based) field</li>
+<li>maxlength - the maximum number of characters that can be entered into the field</li>
+<li>accept - the acceptable file type(s) for a field `type=&quot;file&quot;</li>
+<li>src - the URL for a field <code>type=&quot;image&quot;</code></li>
+<li>alt - the alternative text for a field <code>type=&quot;image&quot;</code></li>
+<li>align - the alignment of the image for a field <code>type=&quot;image&quot;</code> (not supported in HTML5)</li>
+</ol>
+<p>The file types specified by <code>accept=</code> may be a list of comma separated file extensions, MIME types or one or more of <code>image/</code>, <code>audio/</code> and <code>video/*</code>.</p>
+<p>The browser gives no feedback when <code>maxlength</code> is reached: use a script to alert the user.</p>
+<h2 id="html5-form-input-attributes">HTML5 Form Input Attributes</h2>
+<p>HTML5 defines new attributes many of which imply greater validation of user input by the browser. However, there are many ways, with and without scripts, that 'illegal' input may be submitted. The server should do its own checking.</p>
+<p>The additional attributes new to HTML5 are:</p>
+<ol style="list-style-type: decimal">
+<li>autocomplete - on or off: when 'on' the browser may make suggestions based on values entered previously;</li>
+<li>autofocus - the input field should gain focus when the page in loaded (reset);</li>
+<li>dirname - something to do with the text direction, presumably for Asian languages;</li>
+<li>form - specifies, for a standalone <code>&lt;input&gt;</code> element, the forms it belongs to;</li>
+<li>height/width - the dimensions in pixels of a field <code>type=&quot;image&quot;</code></li>
+<li>list - cross-references a <code>&lt;datalist&gt;</code> element that pre-defines field values;</li>
+<li>min/max - the range of values of a number field;</li>
+<li>multiple - the user can enter more than one value in the field;</li>
+<li>pattern - a regular expression against which data entered into the field is checked;</li>
+<li>placeholder - text to appear in the field when the form is displayed before the user enters any data;</li>
+<li>required - the field must be filled in before the form can be submitted;</li>
+<li>step - often used with <code>min=</code> and/or <code>max=</code> to specify the modulus of valid values;</li>
+</ol>
+<p>Not all attributes make sense with all input types but which go with which is beyond the scope of these notes. Assume inappropriate attributes or attributes not understood by older browsers are simply ignored.</p>
+<p>The <code>placeholder=</code> attribute is often a hint as to what the user should enter.</p>
+<p>The <code>title=</code> attribute is often used as a tool-tip to suggest the regular expression expected by <code>pattern=</code>.</p>
+<pre class="sourceCode html"><code class="sourceCode html">   Country code: <span class="kw">&lt;input</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="ot"> name=</span><span class="st">&quot;country_code&quot;</span><span class="ot"> pattern=</span><span class="st">&quot;[A-Za-z]{3}&quot;</span><span class="ot"> title=</span><span class="st">&quot;Three letter country code&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>The <code>multiple</code> attribute when used with <code>type=file</code> allows the user to select more than one file using the &quot;Browse&quot; button. Typically multiple selection is with shift-click or ctrl-click.</p>
+<p>The <code>multiple</code> attribute when used with <code>type=email</code> allows the user to enter a comma separated list of e-mail addresses.</p>
+<p>It would appear that when using the <code>list=</code> attribute, the <code>type=</code> attribute is not needed.</p>
+<p>Normally, how a form appears derived directly from its contents. How, then, does this work for field with the <code>form=</code> attribute ?</p>
+<hr /><!-- HTML 5 Form Override Attributes -->
+
+<p>HTML5 also defines the following input field attributes that may be used to override the eponymous form attribute:</p>
+<ul>
+<li>formaction,</li>
+<li>formenctype,</li>
+<li>formmethod,</li>
+<li>formnovalidate and</li>
+<li>formtarget.</li>
+</ul>
+<p>They are valid for submit fields, which rather implies a form may have more than one. Since <code>formnovalidate</code> does not take a value, it is used to override the form default, which is validate.</p>
+<hr />
+
+</body>
+</html>
+
+
