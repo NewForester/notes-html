@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-history">HTML History</h2>
+<p>In 1989 Sir Tim Berners-Lee invented the World Wide Web and publishes HTML in 1991.</p>
+<p>In 1999 the W3C (World Wide Web Consortium) publishes HTML 4.01 and, in 2000, XHTML.</p>
+<p>In 2004, the W3C stopped work on HTML in favour of XHTML so WHATWG (Web Hypertext Application Technology Working Group) was formed to continue HTML development.</p>
+<p>In 2006 W3C conceded and the two groups worked together.</p>
+<p>In 2008 the first HTML5 public draft was released.</p>
+<p>In 2012 W3C and WHATWG split. W3c favour a definitive HTML5 and XHTML standard, WHATWG favour a &quot;living standard&quot;.</p>
+<h2 id="html5-changes">HTML5 Changes</h2>
+<p>The document type declaration is now very simple:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></code></pre>
+<p>as is that of the character set encoding:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>which is actually the default for HTML5.</p>
+<hr /><!-- New Elements -->
+
+<p>The most interesting new elements in HTML5 are:</p>
+<ol style="list-style-type: decimal">
+<li>semantic elements - <code>&lt;header&gt;</code> and so on</li>
+<li>form element attributes - number, data, time and so on</li>
+<li>graphic elements - <code>&lt;svg&gt;</code> and <code>&lt;canvas&gt;</code></li>
+<li>multi-media elements - <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></li>
+</ol>
+<p>Older browsers can be 'taught' how to handle new elements.</p>
+<hr /><!-- HTML APIs -->
+
+<p>HTML APIs are also new:</p>
+<ol style="list-style-type: decimal">
+<li>geolocation - to locate a user on the globe</li>
+<li>drag and drop - any element may be draggable</li>
+<li>local storage - a powerful replacement for cookies</li>
+<li>application cache - a cache for code, not just data</li>
+<li>web Workers - back ground scripts that do not affect page performance</li>
+<li>server sent events - (SSE) page update without the client polling the server</li>
+</ol>
+<hr /><!-- Elements removed -->
+
+<p>A number of elements are removed:</p>
+<ol style="list-style-type: decimal">
+<li>acronym - use <code>&lt;abbr&gt;</code></li>
+<li>applet - use <code>&lt;object&gt;</code></li>
+<li>basefont - use CSS</li>
+<li>big - use CSS</li>
+<li>center - use CSS</li>
+<li>dir - use <code>&lt;ul&gt;</code></li>
+<li>font - use CSS</li>
+<li>frame</li>
+<li>framset</li>
+<li>noframes</li>
+<li>strike - use CSS or <code>&lt;s&gt;</code> or <code>&lt;del&gt;</code></li>
+<li>tt - use CSS</li>
+</ol>
+<hr />
+
+
+<h2 id="html5-support">HTML5 Support</h2>
+<p>All modern browsers recognise HTML5.</p>
+<p>All browsers, old and new, recognise unknown HTML elements as inline elements. It is possible to 'teach' older browsers to handle 'unknown' elements.</p>
+<p>Eight of the new semantic elements are block-level elements. The CSS display property can be used to tell an old browser to treat them this way:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    header, section, footer, aside, nav, main, article, figure {
+        display: block;
+    }</code></pre>
+<p>It is possible to add elements to an HTML page using a browser trick:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;style&gt;</span>
+        myHero <span class="kw">{</span> <span class="er">...</span> <span class="kw">}</span>
+    <span class="kw">&lt;/style&gt;</span>
+
+    <span class="kw">&lt;myHero&gt;</span>My Hero Element<span class="kw">&lt;/myHero&gt;</span></code></pre>
+<p>For IE 9 and earlier you also need:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;script&gt;</span>
+        <span class="kw">document</span>.<span class="fu">createElement</span>(<span class="st">&quot;myHero&quot;</span>)
+    <span class="kw">&lt;/script&gt;</span></code></pre>
+<p>For IE 8 and earlier you also need:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="co">&lt;!--[if lt IE 9]&gt;</span>
+
+<span class="co">        &lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;</span>
+
+<span class="co">    &lt;![endif]--&gt;</span></code></pre>
+<h2 id="html4-to-html5-migration">HTML4 to HTML5 Migration</h2>
+<p>It is possible to convert a document from HTML4 to HTML5 without destroying any of the original content or structure.</p>
+<p>The process appears to be simple. Change:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;<span class="dt">&gt;</span>
+
+    <span class="kw">&lt;meta</span><span class="ot"> http-equiv=</span><span class="st">&quot;Content-Type&quot;</span><span class="ot"> content=</span><span class="st">&quot;text/html;charset=utf-8&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>to:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+
+    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>Apply the changes recommended in the previous section to support HTML5 semantic elements in older browsers.</p>
+<p>Convert the document to use HTML5 semantic elements. So:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;header&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;menu&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;footer&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>might become:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;header&gt;</span>
+    <span class="kw">&lt;nav&gt;</span>
+    <span class="kw">&lt;section&gt;</span>
+    <span class="kw">&lt;article&gt;</span>
+    <span class="kw">&lt;footer&gt;</span></code></pre>
+<p>Be sure to change the CSS styling to match:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    div#header { ... }
+    div#content { ... }
+    div.article { ... }
+    div#footer { ... }
+    div#menu ul { ... }
+    div#menu ul li { ... }</code></pre>
+<p>might become:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    header { ... }
+    section { ... }
+    article { ... }
+    footer { ... }
+    nav ul { ... }
+    nav ul li { ... }</code></pre>
+<p>There are no hard and fast rules as to what is a section and what is an article so a certan amount of good judegement is required. On a page by page basis, the manner in which <code>&lt;div&gt;</code> elements are structured in the old HTML4 may be the best guide.</p>
+</body>
+</html>
+
+
