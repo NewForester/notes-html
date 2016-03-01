@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html5-elements">HTML5 Elements</h2>
+<p>Elements such as <code>&lt;form&gt;</code> and <code>&lt;table&gt;</code> indicate the nature of their contents. In contrast elements such as <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> do not: they have no semantics.</p>
+<p>Semantic elements are useful to machine readers of web pages - indexers and search engines as well a screen readers.</p>
+<p>HTML5 introduces some important new semantic elements. They are supported by all modern browsers and older browsers can be taught to treat them as block elements.</p>
+<p>The new elements are intended to make conventions such as <code>&lt;div id=&quot;nav&quot;&gt;</code>, <code>&lt;div class=&quot;header&quot;&gt;</code> and <code>&lt;div id=&quot;footer&quot;&gt;</code> obsolete. They are:</p>
+<ol style="list-style-type: decimal">
+<li>article - a grouping of self contained contents</li>
+<li>aside - secondary information (such as a sidebar)</li>
+<li>details - details that can be hidden/revealed by user action</li>
+<li>figcaption - a caption for an image and for forth</li>
+<li>figure - to group a caption with an its image and so forth</li>
+<li>footer - meta-information, such as copyright, about a page, section</li>
+<li>header - introductory text for a page, section or article</li>
+<li>main - the content of a page that is not repeated elsewhere</li>
+<li>mark - in-line element that serves to highlight text</li>
+<li>nav - major block of navigation links</li>
+<li>section - a thematic grouping of contents, typically with a heading</li>
+<li>summary - a summary for <code>&lt;details&gt;</code> that cannot be hidden</li>
+<li>time - denotes a human readable date/time (with machine readable value)</li>
+</ol>
+<p>One might expect a page to have a header and footer and often a navigation bar (<code>&lt;nav&gt;</code>). Beyond that it is not clear how these elements will be used in practice.</p>
+<p>Does a section have article or vice versa or are they mutually exclusive ? There are no guidelines and nesting is perfectly possible.</p>
+<p>Many of the other elements new with HTML5 may the thought of as structural elements:</p>
+<ol style="list-style-type: decimal">
+<li>bdi - used to isolate text that might be formatted in a different direction from its surroundings</li>
+<li>dialog - defines a dialogue box or window</li>
+<li>menuitem - a command/menu item that may be invoked from a pop-up menu</li>
+<li>meter - a scalar measurement within a known range (i.e. display a gauge)</li>
+<li>progress - a progress bar (not the same as a gauge)</li>
+<li>wbr - indicates a word break opportunity in a long word</li>
+</ol>
+<p>There are now elements for <a href="graphics.html">graphics</a>:</p>
+<ol style="list-style-type: decimal">
+<li>canvas - draw graphics on the fly (usually with JavaScript)</li>
+<li>svg - draw scalable vector graphics</li>
+</ol>
+<p>There are also new elements for <a href="media.html">media</a>:</p>
+<ol style="list-style-type: decimal">
+<li>audio - defines sound content</li>
+<li>embed - defines containers for external applications (i.e. plug-ins)</li>
+<li>source - defines sources for <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></li>
+<li>track - defines tracks for <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></li>
+<li>video - defines video or 'movie' content</li>
+</ol>
+<p>There are three elements for East Asian topography:</p>
+<ol style="list-style-type: decimal">
+<li>rp - what to show in browsers that do not support ruby notation</li>
+<li>rt - ruby notation explanation / pronunciation</li>
+<li>ruby - spans ruby notation</li>
+</ol>
+<p>There are three are new <a href="forms-elements.html">form</a> elements:</p>
+<ol style="list-style-type: decimal">
+<li>datalist - pre defined option for input controls</li>
+<li>keygen - key pair generator for forms</li>
+<li>output - for the display of a derived value</li>
+</ol>
+<p>and a large number of new <a href="form-input-types.html">types and attributes</a> for the form input element.</p>
+<p>HTML5 accepts four syntax variants for attributes:</p>
+<ol style="list-style-type: decimal">
+<li>empty - <code>disabled</code></li>
+<li>unquoted - <code>value=John</code></li>
+<li>single quoted - <code>value='John Doe'</code></li>
+<li>double quoted - <code>value=&quot;John Doe&quot;</code></li>
+</ol>
+<p>The last is recommended for compatibility with XHTML.</p>
+</body>
+</html>
+
+
