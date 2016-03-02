@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html5-style-guide">HTML5 Style Guide</h2>
+<p>This section is coding conventions and a style guide for HTML5. Much of it has already been recommended.</p>
+<p>HTML5 is not as rigorous as XHTML and although XHTML may have fallen out of favour, it is recommended the discipline of XHTML be retained.</p>
+<!-- Document Level -->
+
+<p>At the document level:</p>
+<ol style="list-style-type: decimal">
+<li>always declare the correct document type;</li>
+<li>do not leave out the html element: use it to specify the document language;</li>
+<li>do not leave out the body or the head elements;</li>
+<li>the title element is required: make it meaningful;</li>
+<li>define the language and character set as early as possible;</li>
+<li>always set the view port;</li>
+</ol>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+    <span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en-GB&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head&gt;</span>
+      <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;title&gt;</span>The Answer to Life, the Universe and Everything<span class="kw">&lt;/title&gt;</span>
+    <span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+      <span class="co">&lt;!-- Whatever you want.  Whatever you need. --&gt;</span>
+    <span class="kw">&lt;/body&gt;</span>
+    <span class="kw">&lt;/html&gt;</span></code></pre>
+<!-- White Space and Comments -->
+
+<p>With respect to white space and comments:</p>
+<ol style="list-style-type: decimal">
+<li>avoid long code lines: 80 characters is suggested as a maximum;</li>
+<li>do not add blank lines without a reason: use for readability between large or logical code blocks;</li>
+<li>use <em>2</em> spaces for indentation: do not use the tab key;</li>
+<li>it is not necessary to indent every element;</li>
+<li>short comments should be written on one line;</li>
+<li>longer comments should be opened and closed on separate lines;</li>
+</ol>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="co">&lt;!-- This is a short comment --&gt;</span>
+
+    <span class="co">&lt;!--</span>
+<span class="co">      A longer comment.</span>
+<span class="co">      Spread over several lines.</span>
+<span class="co">    --&gt;</span></code></pre>
+<!-- Elements and Attributes -->
+
+<p>For elements:</p>
+<ol style="list-style-type: decimal">
+<li>write element names in lower case: certainly avoid mixed case;</li>
+<li>close all elements: never leave off the closing <code>&lt;/element&gt;</code>;</li>
+<li>close empty elements: use <code>/&gt;</code>, not just <code>&gt;</code>;</li>
+<li>write attribute names in lower case: certainly avoid mixed case;</li>
+<li>quote all attribute values: they are required when the value contains spaces;</li>
+<li>always supply an alt attribute to image elements;</li>
+<li>also define the image width and height to reduce flicker;</li>
+<li>do not use spaces around the <em>=</em> between attribute names and their values;</li>
+</ol>
+<!-- Style Sheets -->
+
+<p>For styles and style sheets:</p>
+<ol style="list-style-type: decimal">
+<li>use simple syntax for linking to style sheets: the type attribute is not necessary;</li>
+<li>short CSS rules may be written on one line;</li>
+<li>longer CSS rules should be split over a number of lines;</li>
+</ol>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;styles.css&quot;</span><span class="kw">&gt;</span>
+
+    body { border-style: double; }
+
+    body {
+      background-color: lightgrey;
+      font-family: &quot;Arial Black&quot;, Helvetica, sans-serif;
+      font-size: 16em;
+      color: black;
+    }</code></pre>
+<p>Furthermore:</p>
+<ol style="list-style-type: decimal">
+<li>place the opening bracket on the same line as the selector;</li>
+<li>use one space before the opening bracket;</li>
+<li>use <em>2</em> spaces for indentation;</li>
+<li>use semicolon after each property-value pair, including the last;</li>
+<li>only use quotes around values if the value contains spaces;</li>
+<li>place the closing bracket on a new line, without leading spaces;</li>
+<li>avoid lines over 80 characters;</li>
+</ol>
+<!-- Loading Javascript -->
+
+<p>For scripts:</p>
+<ol style="list-style-type: decimal">
+<li>use simple syntax for loading external scripts: the type attribute is not necessary;</li>
+</ol>
+<p>Javascript is case sensitive. The following are not equivalent:</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">    <span class="kw">var</span> obj = getElementById(<span class="st">&quot;Exemplar&quot;</span>);
+
+    <span class="kw">var</span> obj = getElementById(<span class="st">&quot;exemplar&quot;</span>);</code></pre>
+<!-- Lower case files names -->
+
+<p>For file names:</p>
+<ol style="list-style-type: decimal">
+<li>use lower case file names: these work with case and case insensitive web servers and file systems;</li>
+<li>use the file extensions <code>.html</code>, <code>.css</code> and <code>.js</code>;</li>
+<li>assume the server will default the page name to &quot;index.html&quot;;</li>
+</ol>
+</body>
+</html>
+
+
