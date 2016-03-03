@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<p>HTML5 graphics has been supported by browsers for quite some time. It takes two forms:</p>
+<ul>
+<li><code>&lt;canvas&gt;</code> and</li>
+<li><code>&lt;svg&gt;</code></li>
+</ul>
+<h2 id="the-html5-canvas-element">The HTML5 Canvas Element</h2>
+<p>The <code>&lt;canvas&gt;</code> element is a rectangular place-holder that reserves space in which graphics may be drawn on-the-fly using JavaScript.</p>
+<p>It should have an <code>id=</code> attribute for use by JavaScript and <code>height=</code> and <code>width=</code> attributes to declare its dimensions. The <code>style=</code> attribute may be used to give it a border.</p>
+<p>A <code>&lt;canvas&gt;</code> element provides a context handle for use by JavaScript.</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">var</span> c = <span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;myCanvas&quot;</span>);
+    <span class="kw">var</span> ctx = <span class="kw">c</span>.<span class="fu">getContext</span>(<span class="st">&quot;2d&quot;</span>);</code></pre>
+<p>The context provides methods for drawing on the canvas.</p>
+<p>There is a separate W3C <a href="https://www.w3schools.com/graphics/canvas_intro.asp">HTML Canvas</a> tutorial.</p>
+<h3 id="examples-of-canvas-drawing-methods">Examples of Canvas Drawing Methods</h3>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">
+    <span class="co">// line</span>
+    <span class="kw">ctx</span>.<span class="fu">moveTo</span>(<span class="dv">0</span>,<span class="dv">0</span>);
+    <span class="kw">ctx</span>.<span class="fu">lineTo</span>(<span class="dv">200</span>,<span class="dv">100</span>);
+    <span class="kw">ctx</span>.<span class="fu">stroke</span>();
+
+    <span class="co">// circle</span>
+    <span class="kw">ctx</span>.<span class="fu">beginPath</span>();
+    <span class="kw">ctx</span>.<span class="fu">arc</span>(<span class="dv">95</span>,<span class="dv">50</span>,<span class="dv">40</span>,<span class="dv">0</span>,<span class="dv">2</span>*<span class="kw">Math</span>.<span class="fu">PI</span>);
+    <span class="kw">ctx</span>.<span class="fu">stroke</span>();
+
+    <span class="co">// text</span>
+    <span class="kw">ctx</span>.<span class="fu">font</span> = <span class="st">&quot;30px Arial&quot;</span>;
+    <span class="kw">ctx</span>.<span class="fu">fillText</span>(<span class="st">&quot;Hello World&quot;</span>,<span class="dv">10</span>,<span class="dv">50</span>);
+
+    <span class="co">// stroke text</span>
+    <span class="kw">ctx</span>.<span class="fu">font</span> = <span class="st">&quot;30px Arial&quot;</span>;
+    <span class="kw">ctx</span>.<span class="fu">strokeText</span>(<span class="st">&quot;Hello World&quot;</span>,<span class="dv">10</span>,<span class="dv">50</span>);
+
+    <span class="co">// linear gradient</span>
+    <span class="kw">var</span> grd = <span class="kw">ctx</span>.<span class="fu">createLinearGradient</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">200</span>,<span class="dv">0</span>);
+    <span class="kw">grd</span>.<span class="fu">addColorStop</span>(<span class="dv">0</span>,<span class="st">&quot;red&quot;</span>);
+    <span class="kw">grd</span>.<span class="fu">addColorStop</span>(<span class="dv">1</span>,<span class="st">&quot;white&quot;</span>);
+
+    <span class="kw">ctx</span>.<span class="fu">fillStyle</span> = grd;
+    <span class="kw">ctx</span>.<span class="fu">fillRect</span>(<span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">150</span>,<span class="dv">80</span>);
+
+    <span class="co">// circular gradient</span>
+    <span class="kw">var</span> grd = <span class="kw">ctx</span>.<span class="fu">createRadialGradient</span>(<span class="dv">75</span>,<span class="dv">50</span>,<span class="dv">5</span>,<span class="dv">90</span>,<span class="dv">60</span>,<span class="dv">100</span>);
+    <span class="kw">grd</span>.<span class="fu">addColorStop</span>(<span class="dv">0</span>,<span class="st">&quot;red&quot;</span>);
+    <span class="kw">grd</span>.<span class="fu">addColorStop</span>(<span class="dv">1</span>,<span class="st">&quot;white&quot;</span>);
+
+    <span class="kw">ctx</span>.<span class="fu">fillStyle</span> = grd;
+    <span class="kw">ctx</span>.<span class="fu">fillRect</span>(<span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">150</span>,<span class="dv">80</span>);
+
+    <span class="co">// image</span>
+    <span class="kw">var</span> img = <span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;scream&quot;</span>);
+    <span class="kw">ctx</span>.<span class="fu">drawImage</span>(img,<span class="dv">10</span>,<span class="dv">10</span>);</code></pre>
+<h2 id="the-html5-svg-element">The HTML5 SVG Element</h2>
+<p>SVG stands for Scalable Vector Graphics and can be used to define graphics for the Internet. It is a W3C recommendation.</p>
+<p>The <code>&lt;svg&gt;</code> element is a container for SVG graphics. It should have <code>height=</code> and <code>width=</code> attributes to declare its dimensions. The <code>style=</code> attribute may be used to give it a border.</p>
+<p>The container holds XML elements for drawing paths, boxes, circles, text and graphic images. It does not require JavaScript.</p>
+<p>There is a separate W3C <a href="https://www.w3schools.com/graphics/svg_intro.asp">SVG</a> tutorial.</p>
+<h3 id="examples-of-svg-drawing-methods">Examples of SVG Drawing Methods:</h3>
+<pre class="sourceCode html"><code class="sourceCode html">  <span class="co">&lt;!-- a circle --&gt;</span>
+  <span class="kw">&lt;circle</span><span class="ot"> cx=</span><span class="st">&quot;50&quot;</span><span class="ot"> cy=</span><span class="st">&quot;50&quot;</span><span class="ot"> r=</span><span class="st">&quot;40&quot;</span><span class="ot"> stroke=</span><span class="st">&quot;green&quot;</span><span class="ot"> stroke-width=</span><span class="st">&quot;4&quot;</span><span class="ot"> fill=</span><span class="st">&quot;yellow&quot;</span> <span class="kw">/&gt;</span>
+
+  <span class="co">&lt;!-- a rectangle --&gt;</span>
+  <span class="kw">&lt;rect</span><span class="ot"> width=</span><span class="st">&quot;400&quot;</span><span class="ot"> height=</span><span class="st">&quot;100&quot;</span><span class="ot"> style=</span><span class="st">&quot;fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)&quot;</span> <span class="kw">/&gt;</span>
+
+  <span class="co">&lt;!-- a rounded rectangle --&gt;</span>
+  <span class="kw">&lt;rect</span><span class="ot"> x=</span><span class="st">&quot;50&quot;</span><span class="ot"> y=</span><span class="st">&quot;20&quot;</span><span class="ot"> rx=</span><span class="st">&quot;20&quot;</span><span class="ot"> ry=</span><span class="st">&quot;20&quot;</span><span class="ot"> width=</span><span class="st">&quot;150&quot;</span><span class="ot"> height=</span><span class="st">&quot;150&quot;</span>
+<span class="ot">      style=</span><span class="st">&quot;fill:red;stroke:black;stroke-width:5;opacity:0.5&quot;</span> <span class="kw">/&gt;</span>
+
+  <span class="co">&lt;!-- a star --&gt;</span>
+  <span class="kw">&lt;polygon</span><span class="ot"> points=</span><span class="st">&quot;100,10 40,198 190,78 10,78 160,198&quot;</span>
+<span class="ot">      style=</span><span class="st">&quot;fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;&quot;</span> <span class="kw">/&gt;</span>
+
+  <span class="co">&lt;!-- a logo --&gt;</span>
+  <span class="kw">&lt;defs&gt;</span>
+    <span class="kw">&lt;linearGradient</span><span class="ot"> id=</span><span class="st">&quot;grad1&quot;</span><span class="ot"> x1=</span><span class="st">&quot;0%&quot;</span><span class="ot"> y1=</span><span class="st">&quot;0%&quot;</span><span class="ot"> x2=</span><span class="st">&quot;100%&quot;</span><span class="ot"> y2=</span><span class="st">&quot;0%&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;stop</span><span class="ot"> offset=</span><span class="st">&quot;0%&quot;</span><span class="ot"> style=</span><span class="st">&quot;stop-color:rgb(255,255,0);stop-opacity:1&quot;</span> <span class="kw">/&gt;</span>
+      <span class="kw">&lt;stop</span><span class="ot"> offset=</span><span class="st">&quot;100%&quot;</span><span class="ot"> style=</span><span class="st">&quot;stop-color:rgb(255,0,0);stop-opacity:1&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;/linearGradient&gt;</span>
+  <span class="kw">&lt;/defs&gt;</span>
+  <span class="kw">&lt;ellipse</span><span class="ot"> cx=</span><span class="st">&quot;100&quot;</span><span class="ot"> cy=</span><span class="st">&quot;70&quot;</span><span class="ot"> rx=</span><span class="st">&quot;85&quot;</span><span class="ot"> ry=</span><span class="st">&quot;55&quot;</span><span class="ot"> fill=</span><span class="st">&quot;url(#grad1)&quot;</span> <span class="kw">/&gt;</span>
+  <span class="kw">&lt;text</span><span class="ot"> fill=</span><span class="st">&quot;#ffffff&quot;</span><span class="ot"> font-size=</span><span class="st">&quot;45&quot;</span><span class="ot"> font-family=</span><span class="st">&quot;Verdana&quot;</span><span class="ot"> x=</span><span class="st">&quot;50&quot;</span><span class="ot"> y=</span><span class="st">&quot;86&quot;</span><span class="kw">&gt;</span>SVG<span class="kw">&lt;/text&gt;</span></code></pre>
+<h2 id="canvas-and-svg-comparison">Canvas and SVG Comparison</h2>
+<p>Canvas:</p>
+<ol style="list-style-type: decimal">
+<li>requires JavaScript;</li>
+<li>draws 2D graphics on-the-fly;</li>
+<li>pixel based so the whole canvas is (re-)rendered as a unit;</li>
+<li>resolution dependent;</li>
+<li>well suited for graphic intensive games;</li>
+<li>no support for event handlers;</li>
+<li>poor text rendering;</li>
+<li>rendered graphic can be saved as a <code>.png</code> or <code>.jpg</code></li>
+</ol>
+<p>SVG:</p>
+<ol style="list-style-type: decimal">
+<li>XML based notation for describing 2D graphics;</li>
+<li>has a DOM (so JavaScript event handlers may be attached);</li>
+<li>each shape is an object the browser can (re-)render independently;</li>
+<li>resolution independent;</li>
+<li>not suitable for game applications;</li>
+<li>support for event handlers;</li>
+<li>rendering is slow if the graphics are complex and uses the DOM a great deal;</li>
+<li>better suited for large rendering areas (Google Maps for example)</li>
+</ol>
+<h2 id="google-maps">Google Maps</h2>
+<p>Google Maps allows even a simple web page to display a map.</p>
+<p>This uses an HTML API provided by Google. You need an API key from Google but this is free.</p>
+<p>There is a separate W3C <a href="https://www.w3schools.com/graphics/google_maps_intro.asp">Google Maps</a> tutorial.</p>
+<h3 id="example-of-rendering-a-google-map">Example of Rendering a Google Map:</h3>
+<p>It can be as simple as:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
+    <span class="kw">&lt;html&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+
+    <span class="kw">&lt;h1&gt;</span>My First Google Map<span class="kw">&lt;/h1&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;map&quot;</span><span class="ot"> style=</span><span class="st">&quot;width:400px;height:400px;background:yellow&quot;</span><span class="kw">&gt;&lt;/div&gt;</span>
+
+    <span class="kw">&lt;script&gt;</span>
+    <span class="kw">function</span> myMap() {
+        <span class="kw">var</span> mapOptions = {
+            <span class="dt">center</span>: <span class="kw">new</span> <span class="kw">google.maps</span>.<span class="fu">LatLng</span>(<span class="fl">51.5</span>, -<span class="fl">0.12</span>),
+            <span class="dt">zoom</span>: <span class="dv">10</span>,
+            <span class="dt">mapTypeId</span>: <span class="kw">google.maps.MapTypeId</span>.<span class="fu">HYBRID</span>
+        }
+        <span class="kw">var</span> map = <span class="kw">new</span> <span class="kw">google.maps</span>.<span class="fu">Map</span>(<span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;map&quot;</span>), mapOptions);
+    }
+    <span class="kw">&lt;/script&gt;</span>
+
+    <span class="kw">&lt;script</span>
+<span class="ot">      src=</span><span class="st">&quot;https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU</span><span class="er">&amp;</span><span class="st">callback=myMap&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/script&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+<p>Explanation:</p>
+<ol style="list-style-type: decimal">
+<li>the <code>&lt;div id=&quot;map&quot;</code> defines the map container and its size;</li>
+<li>the <code>var map = new</code> creates the map in the container;</li>
+<li>the <code>center</code> attribute gives the latitude and longitude;</li>
+<li>the <code>zoom</code> attribute gives the resolution;</li>
+<li>the <code>mapTypeId</code> gives the map's type (HYBRID);</li>
+<li>alternatives are ROADMAP, SATELLITE, HYBRID and TERRAIN;</li>
+<li>presumably <code>map</code> is a handle through which the on-screen map can be manipulated;</li>
+<li>the external script references the Google API;</li>
+<li>the JavaScript function <code>myMap()</code> is passed as a callback function</li>
+</ol>
+</body>
+</html>
+
+
