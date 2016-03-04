@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html5-multimedia">HTML5 Multimedia</h2>
+<p>Multimedia is the combination of audio and visual media such as in a film. This includes images, music, sound, videos, animation and graphics although images and graphics under HTML are covered elsewhere.</p>
+<p>Browsers have handled multimedia through plug-ins for a very long time.</p>
+<p>HTML5 includes standard support for multimedia without plug-ins. Major browsers had provided this support before the standard.</p>
+<h3 id="html5-video">HTML5 Video</h3>
+<p>The common video formats are:</p>
+<ol style="list-style-type: decimal">
+<li>MPEG - by Moving Pictures Expert Group</li>
+<li>AVI - by Microsoft - Audio Video Interleave</li>
+<li>WMV - by Microsoft - Windows Media Video</li>
+<li>QuickTime - by Apple</li>
+<li>RealVideo - by Read Media (for low bandwidth video streams)</li>
+<li>Flash - by Macromedia (often needs a plug-in)</li>
+<li>Ogg - by Xiph Org Foundation (Open Source)</li>
+<li>WebM - by Mozilla, Opera, Google and others</li>
+<li>MP4 - Moving Pictures Expert Group but based on QuickTime</li>
+</ol>
+<p>HTML5 requires support of MP4, WebM and Ogg. The MIME types are as you would expect (video/mp4 etc).</p>
+<p>All major browsers support MP4. Internet Explorer and Safari do not support WebM or Ogg.</p>
+<p>The <code>&lt;video&gt;</code> element provides a standard way to embed video in an HTML document. Before HTML5, video could only be played in a browser using a plug-in.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;video</span><span class="ot"> width=</span><span class="st">&quot;320&quot;</span><span class="ot"> height=</span><span class="st">&quot;240&quot;</span><span class="ot"> controls</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">&quot;movie.mp4&quot;</span><span class="ot"> type=</span><span class="st">&quot;video/mp4&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">&quot;movie.ogg&quot;</span><span class="ot"> type=</span><span class="st">&quot;video/ogg&quot;</span><span class="kw">&gt;</span>
+      Your browser does not support the video tag.
+    <span class="kw">&lt;/video&gt;</span></code></pre>
+<p>Specifying dimensions for the element is recommended to avoid flicker during page load.</p>
+<p>The <code>controls</code> attribute tells the browser to add video controls such as play and pause. An alternative is <code>autoplay</code> but this attribute is not supported by some popular mobile devices.</p>
+<p>The <code>&lt;source&gt;</code> element allows the specification of alternative files and formats. The file type of media files is often an indication of the format of the media content. However, the MIME type, not the file type, is used.</p>
+<p>The content is displayed only if the browser does not support the <code>&lt;video&gt;</code> element.</p>
+<p>HTML5 defines DOM methods, properties and events for the <code>&lt;video&gt;</code> element that allow web pages, through scripts, to act as fully functional video playback devices. See the <a href="https://www.w3schools.com/tags/ref_av_dom.asp">HTML5 Audio/Video DOM Reference</a>.</p>
+<h3 id="html5-audio">HTML5 Audio</h3>
+<p>The common audio formats are:</p>
+<ol style="list-style-type: decimal">
+<li>MIDI - Musical Instrument Digital Interface (sound cards)</li>
+<li>RealAudio - by Read Media (for low bandwidth audio streams)</li>
+<li>WMA - by Microsoft - Windows Media Audio</li>
+<li>AAC - by Apple - Advanced Audio Coding</li>
+<li>WAV - by IBM and Microsoft</li>
+<li>Ogg - by Xiph Org Foundation (Open Source)</li>
+<li>MP3 - the sound part of MPEG</li>
+<li>MP4 - the sound part of MP4</li>
+</ol>
+<p>HTML5 requires support of MP3, WAV and Ogg. The MIME type for MP3 is (audio/mpeg); the others are as you would expect.</p>
+<p>All major browsers support MP3. Internet Explorer and Safari do not support Ogg and Internet Explorer also does not support WebM.</p>
+<p>The <code>&lt;audio&gt;</code> element provides a standard way to embed audio in an HTML document. Before HTML5, audio could only be played in a browser using a plug-in.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;audio</span><span class="ot"> controls</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">&quot;horse.ogg&quot;</span><span class="ot"> type=</span><span class="st">&quot;audio/ogg&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">&quot;horse.mp3&quot;</span><span class="ot"> type=</span><span class="st">&quot;audio/mpeg&quot;</span><span class="kw">&gt;</span>
+      Your browser does not support the audio element.
+    <span class="kw">&lt;/audio&gt;</span></code></pre>
+<p>The <code>controls</code> attribute tells the browser to add audio controls such as play and pause.</p>
+<p>The <code>&lt;source&gt;</code> element allows the specification of alternative files and formats. The file type of media files is often an indication of the format of the media content. However, the MIME type, not the file type, is used.</p>
+<p>The content is displayed only if the browser does not support the <code>&lt;audio&gt;</code> element.</p>
+<p>HTML5 defines DOM methods, properties and events for the <code>&lt;audio&gt;</code> element that allow web pages, through scripts, to act as fully functional audio playback devices. See the <a href="https://www.w3schools.com/tags/ref_av_dom.asp">HTML5 Audio/Video DOM Reference</a>.</p>
+<h3 id="html5-plug-ins">HTML5 Plug-ins</h3>
+<p>A plug-in is a helper application that extends the functionality of a (browser) application. Well known but less often used are Java applets. Examples include map display, virus scanning, and bank id verification</p>
+<p>The <code>&lt;object&gt;</code> element may be used to embed plug-ins, snippets of HTML and even images. It is supported by all browsers.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;object</span><span class="ot"> width=</span><span class="st">&quot;400&quot;</span><span class="ot"> height=</span><span class="st">&quot;50&quot;</span><span class="ot"> data=</span><span class="st">&quot;bookmark.swf&quot;</span><span class="kw">&gt;&lt;/object&gt;</span>
+    <span class="kw">&lt;object</span><span class="ot"> width=</span><span class="st">&quot;100%&quot;</span><span class="ot"> height=</span><span class="st">&quot;500px&quot;</span><span class="ot"> data=</span><span class="st">&quot;snippet.html&quot;</span><span class="kw">&gt;&lt;/object&gt;</span>
+    <span class="kw">&lt;object</span><span class="ot"> data=</span><span class="st">&quot;audi.jpeg&quot;</span><span class="kw">&gt;&lt;/object&gt;</span></code></pre>
+<p>The <code>&lt;embed&gt;</code> element may also be used to embed objects and has been supported by all the major browsers for years.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;embed</span><span class="ot"> width=</span><span class="st">&quot;400&quot;</span><span class="ot"> height=</span><span class="st">&quot;50&quot;</span><span class="ot"> src=</span><span class="st">&quot;bookmark.swf&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;embed</span><span class="ot"> width=</span><span class="st">&quot;100%&quot;</span><span class="ot"> height=</span><span class="st">&quot;500px&quot;</span><span class="ot"> src=</span><span class="st">&quot;snippet.html&quot;</span> <span class="kw">/&gt;</span>
+    <span class="kw">&lt;embed</span><span class="ot"> src=</span><span class="st">&quot;audi.jpeg&quot;</span> <span class="kw">/&gt;</span></code></pre>
+<p>The difference between the two is that <code>&lt;object&gt;</code> elements can have content that is displayed if the <code>data=</code> file cannot be found while <code>&lt;embed&gt;</code> has no closing tag, so no content.</p>
+<p>When it comes to images, the difference between <code>&lt;img&gt;</code> and <code>&lt;embed&gt;</code> is that the former requires the <code>alt=</code> attribute while the latter ignores it.</p>
+<p>Since <code>&lt;embed&gt;</code> has no alternative text mechanism I guess it is not recommended.</p>
+<h3 id="html5-youtube-videos">HTML5 YouTube Videos</h3>
+<p>It is stated that one of the easiest ways to play videos is to use YouTube. This may be less work than converting video formats.</p>
+<p>When you save or play a YouTube video, an id is displayed. You can refer to this in HTML code.</p>
+<p>To embed a YouTube video in HTML:</p>
+<ol style="list-style-type: decimal">
+<li>upload the video to YouTube;</li>
+<li>take note of the video id;</li>
+<li>define an <code>&lt;iframe&gt;</code> element;</li>
+<li>set the <code>src=</code> attribute to references the video;</li>
+<li>set the width an height attributes to the specify the player dimensions;</li>
+<li>add other URL parameters.</li>
+</ol>
+<p>Other URL parameters include autoplay, loop, a playlist and controls.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;iframe</span><span class="ot"> width=</span><span class="st">&quot;420&quot;</span><span class="ot"> height=</span><span class="st">&quot;315&quot;</span>
+<span class="ot">      src=</span><span class="st">&quot;https://www.youtube.com/embed/XGSy3_Czz8k&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/iframe&gt;</span></code></pre>
+<p>Note <code>&lt;iframe&gt;</code> is supported by HTML5; it is <code>&lt;frame&gt;</code> and <code>&lt;frameset&gt;</code> that are not. The use of <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code> is deprecated.</p>
+</body>
+</html>
+
+
