@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="UTF-8" /> <link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html5-apis">HTML5 APIs</h2>
+<p>HTML5 standardises a number of APIs that have been supported by most major browsers for quite some time. These are available to web pages through JavaScript.</p>
+<p>The most used are:</p>
+<ol style="list-style-type: decimal">
+<li>geolocation</li>
+<li>drag/drop</li>
+<li>local storage - Storage objects</li>
+<li>application cache</li>
+<li>web workers - Worker objects</li>
+<li>server sent events - EventSource objects</li>
+</ol>
+<p>A web page that uses one of these should best check the browser does actually supports it:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">if</span>(<span class="kw">typeof</span>(EventSource) !== <span class="st">&quot;undefined&quot;</span>) {
+      <span class="co">// Yes! Server-sent events support!</span>
+      <span class="co">// Some code.....</span>
+    } <span class="kw">else</span> {
+      <span class="co">// Sorry! No server-sent events support..</span>
+    }</code></pre>
+<h3 id="html-geolocation">HTML Geolocation</h3>
+<p>The HTML Geolocation API is used to determine the browser's position on the globe.</p>
+<p>The location may be requested by a local client but the assumption is that it is passed to a server. This may compromise privacy, so the user's agreement is required.</p>
+<p>The accuracy of the geolocation depends on the device on which the browser is running. It is good on devices with GPS, such as smart phones, but may be dreadful on old desktops.</p>
+<p>The main methods of the API are:</p>
+<ul>
+<li>getCurrentPosition,</li>
+<li>watchPosition and</li>
+<li>clearWatch</li>
+</ul>
+<p>The first is useful from providing local information such as nearby points of interest. The last two are useful for turn-by-turn navigation.</p>
+<p>The data returned by <code>getCurrentPosition()</code> always gives:</p>
+<ul>
+<li>latitude,</li>
+<li>longitude and</li>
+<li>accuracy</li>
+</ul>
+<p>as decimal numbers. <!-- But what are the units ? --></p>
+<p>The method will also return the following, if available:</p>
+<ul>
+<li>altitude (and accuracy),</li>
+<li>heading,</li>
+<li>speed and</li>
+<li>timestamp</li>
+</ul>
+<p>Personally, I have never agreed to sharing my location.</p>
+<h3 id="html5-drag-and-drop">HTML5 Drag and Drop</h3>
+<p>In HTML5 any element can be dragged and dropped.</p>
+<p>Use the <code>draggable=</code> attribute on the element to be dragged:</p>
+<pre class="sourceCode html"><code class="sourceCode html">   <span class="kw">&lt;img</span><span class="ot"> draggable=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>Declare an event handler that records what to drag:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">function</span> drag(ev) {
+        <span class="kw">ev.dataTransfer</span>.<span class="fu">setData</span>(<span class="st">&quot;text&quot;</span>, <span class="kw">ev.target</span>.<span class="fu">id</span>);
+    }</code></pre>
+<p>When the element is dragged over another element, another event occurs but the default is to not allow the element to be dropped. The default behaviour must be overruled.</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">function</span> allowDrop(ev) {
+        <span class="kw">ev</span>.<span class="fu">preventDefault</span>();
+    }</code></pre>
+<p>When the element is dropped, a third event occurs so a third handler is needed to say what happens.</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">function</span> drop(ev) {
+        <span class="kw">ev</span>.<span class="fu">preventDefault</span>();
+        <span class="kw">var</span> data = <span class="kw">ev.dataTransfer</span>.<span class="fu">getData</span>(<span class="st">&quot;text&quot;</span>);
+        <span class="kw">ev.target</span>.<span class="fu">appendChild</span>(<span class="kw">document</span>.<span class="fu">getElementById</span>(data));
+    }</code></pre>
+<p>These three handlers deal with events, not elements. The elements are identified by attributes that add the event handlers to the elements.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;div1&quot;</span><span class="ot"> ondrop=</span><span class="st">&quot;drop(event)&quot;</span><span class="ot"> ondragover=</span><span class="st">&quot;allowDrop(event)&quot;</span><span class="kw">&gt;&lt;/div&gt;</span>
+
+    <span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;div2&quot;</span>
+      <span class="er">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;img_logo.gif&quot;</span><span class="ot"> draggable=</span><span class="st">&quot;true&quot;</span><span class="ot"> ondragstart=</span><span class="st">&quot;drag(event)&quot;</span><span class="ot"> width=</span><span class="st">&quot;336&quot;</span><span class="ot"> height=</span><span class="st">&quot;69&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;/div&gt;</span></code></pre>
+<h3 id="html-local-storage">HTML Local Storage</h3>
+<p>HTML Local Storage is an alternative to cookies.</p>
+<p>Information can be stored locally within the browser. It is never transferred to the server. Local storage is by domain and protocol: there is no sharing between web sites.</p>
+<p>This appears to have advantages for both server load and client privacy.</p>
+<p>There are local storage objects, with no expiry date, and session storage objects, that are lost when the browser tab is closed.</p>
+<p>Data is stored in name/value pairs. The value is always a string.</p>
+<p>There are two means of access:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    localStorage.setItem(&quot;lastname&quot;, &quot;Smith&quot;);
+    localStorage.getItem(&quot;lastname&quot;);
+    localStorage.removeItem(&quot;lastname&quot;);</code></pre>
+<p>and</p>
+<pre class="sourceCode html"><code class="sourceCode html">    localStorage.lastname = &quot;Smith&quot;;
+    localStorage.lastname;</code></pre>
+<p>I do not know where this is stored nor when it is purged or whether permission is sought or not (I don't think it is).</p>
+<h3 id="html-application-cache">HTML Application Cache</h3>
+<p>The HTML Application Cache is where web applications can be stored for offline use. That is when the there is no Internet connection.</p>
+<p>The advantages are:</p>
+<ol style="list-style-type: decimal">
+<li>offline browsing - the application may be used even with no Internet connection</li>
+<li>speed - cached resources load faster</li>
+<li>reduced server load - only updated/changed resources are downloaded</li>
+</ol>
+<p>An HTML document declares it wants to use the application cache using the <code>manifest=</code> attribute to reference a manifest file.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;html</span><span class="ot"> manifest=</span><span class="st">&quot;demo.appcache&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>The file type <code>.appcache</code> is recommended and the web server must be configured to supply the file with MIME type &quot;text/cache-manifest&quot;.</p>
+<p>The manifest file is a simple text file with three sections:</p>
+<ol style="list-style-type: decimal">
+<li>CACHE MANIFEST - cache these files on first download;</li>
+<li>NETWORK - never cache these files;</li>
+<li>FALLBACK - use cached file when on-line file(s) is(are) not available;</li>
+</ol>
+<p>The first section must be declared first. <code>*</code> (asterisk) indicates all other files and resources.</p>
+<p>The last section comprises a URI and a fall-back file. Eg:</p>
+<pre><code>    FALLBACK:
+    /html/      /offline.html</code></pre>
+<p>for any file in the <code>/html/</code> directory, use <code>/offline.html</code> as fall-back.</p>
+<p>Lines starting with <code>#</code> are comments.</p>
+<p>Once an application is cached, it remains so until:</p>
+<ol style="list-style-type: decimal">
+<li>the user clears the browser application cache;</li>
+<li>the application cache size limit is reached;</li>
+<li>the manifest file on the server is modified;</li>
+<li>it is updated by JavaScript.</li>
+</ol>
+<p>To trigger cache updates when other files or resources are changed, use a comment with the form:</p>
+<pre><code>    # 2017-01-30 v1.0.1</code></pre>
+<p>in the manifest file and make sure it is updated.</p>
+<p>My browser is set to ask before caching an application. I don't remember it ever doing this.</p>
+<h3 id="html-web-workers">HTML Web Workers</h3>
+<p>An HTML Web Worker is a JavaScript run in the background. When some other script runs (in the foreground) the browser appears to hang until the script finishes.</p>
+<p>Web workers are external scripts: they have no access to (significant) DOM objects such as the window, document or parent objects.</p>
+<p>Here is an example:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">var</span> i = <span class="dv">0</span>;
+
+    <span class="kw">function</span> timedCount() {
+      i = i + <span class="dv">1</span>;
+      postMessage(i);
+      setTimeout(<span class="st">&quot;timedCount()&quot;</span>,<span class="dv">500</span>);
+    }
+
+    timedCount();</code></pre>
+<p>saved in &quot;worker.js&quot;;</p>
+<p>The important part here is the call to the <code>postMessage()</code> method. This posts a message back to the web page.</p>
+<p>The worker is created (and started) by the web page creating a Worker object:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">if</span> (<span class="kw">typeof</span>(w) == <span class="st">&quot;undefined&quot;</span>) {
+        w = <span class="kw">new</span> Worker(<span class="st">&quot;worker.js&quot;</span>);
+    }</code></pre>
+<p>The web page may send and receive messages to and from the worker. An event listener is needed to receive:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">w</span>.<span class="fu">onmessage</span> = <span class="kw">function</span>(event) {
+        <span class="kw">document</span>.<span class="fu">getElementById</span>(<span class="st">&quot;result&quot;</span>).<span class="fu">innerHTML</span> = <span class="kw">event</span>.<span class="fu">data</span>;
+    };</code></pre>
+<p>The only HTML required is declaring where the message appears:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>Count numbers: <span class="kw">&lt;output</span><span class="ot"> id=</span><span class="st">&quot;result&quot;</span><span class="kw">&gt;&lt;/output&gt;&lt;/p&gt;</span></code></pre>
+<p>There should be code to terminate the worker and allow another instance to be created later:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    w.terminate();
+    w = undefined;</code></pre>
+<h3 id="html-server-sent-events">HTML Server Sent Events</h3>
+<p>HTML SSE (Server Sent Events) allow the server to send events to the browser client instead of the client polling the server.</p>
+<p>This allows browser web pages to keep up to date in real time without huge overhead.</p>
+<p>An application might be a news feed. It is an important feature of social media sites.</p>
+<p>An EventSource object must be created that declares the server entity that will generate events:</p>
+<pre class="sourceCode JavaScript"><code class="sourceCode javascript">    <span class="kw">var</span> source = <span class="kw">new</span> EventSource(<span class="st">&quot;sse.php&quot;</span>);</code></pre>
+<p>Event handlers should be defined for:</p>
+<ol style="list-style-type: decimal">
+<li>onopen - when a connection to the server is opened</li>
+<li>onmessage - when a message is received from the server</li>
+<li>onerror - when an error occurs</li>
+</ol>
+<p>The most important is the second of these:</p>
+<pre class="sourceCode html"><code class="sourceCode html">    source.onmessage = function(event) {
+        document.getElementById(&quot;result&quot;).innerHTML += event.data + &quot;<span class="kw">&lt;br&gt;</span>&quot;;
+    };</code></pre>
+<p>It seems there is no shut down method.</p>
+</body>
+</html>
+
+
