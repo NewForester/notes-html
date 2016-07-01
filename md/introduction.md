@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 <head>
+    <title>HTML5: Introduction</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
+## Introduction
 
 These notes were made while learning HTML using the HTML5 Tutorial provided on-line by w3shools.com.
 Their material is "All Rights Reserved".
@@ -22,11 +31,11 @@ all other mark-up languages are converted to HTML and it is HTML that is rendere
 An understanding of HTML is therefore essential to web programming although it may be seldom used directly.
 
 HTML emerged at CERN in 1991. It has been an international standard since 2000.
-Work began on HTML5 in 2004.  It merged in 2008 but was not standardised until 2014.
+Work began on HTML5 in 2004.  The first working draft was published in 2008 but it was not standardised until 2014.
 At the beginning of 2017, web browsers may still not be fully HTML5 compatible.
 
 
-## HTML Documents
+### HTML Documents
 
 An HTML document is a representation of a web page.
 It consists of nested HTML elements and nothing more.
@@ -56,7 +65,7 @@ Each web page has the same top level structure:
 According to the tutorial, `<!DocType html>` is sufficient to declare an HTML5 document.
 
 
-## HTML Elements
+### HTML Elements
 
 All HTML documents consist of nested HTML elements: elements may contain elements.
 
@@ -86,7 +95,7 @@ HTML tags are case insensitive but lower case is recommended.
 Lower case is required for XHTML.
 
 
-## HTML Attributes
+### HTML Attributes
 
 Any HTML element may have HTML attributes that provide additional information.
 
@@ -111,7 +120,7 @@ The choice may be influenced by the value itself:
 No mention at this stage of escape sequences.
 
 
-## Element and Attribute Examples
+### Element and Attribute Examples
 
 <!-- HTML Paragraphs -->
 

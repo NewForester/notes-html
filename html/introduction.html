@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 <head>
+    <title>
+HTML5: Introduction
+</title>
     
+<meta charset="UTF-8" /> <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" /> <meta name="keywords" content="HTML" /> <meta name="author" content="NewForester" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 <h1 id="html5">HTML5</h1>
+<h2 id="introduction">Introduction</h2>
 <p>These notes were made while learning HTML using the HTML5 Tutorial provided on-line by w3shools.com. Their material is &quot;All Rights Reserved&quot;.</p>
 <p>HyperText Markup Language (HTML) is the standard mark-up language for creating web pages.</p>
 <p>HTML, Cascading Style Sheets (CSS) and JavaScript are the key technologies of the World Wide Web.</p>
 <p>HTML is the assembly language of the web: all other mark-up languages are converted to HTML and it is HTML that is rendered by web browsers.</p>
 <p>An understanding of HTML is therefore essential to web programming although it may be seldom used directly.</p>
-<p>HTML emerged at CERN in 1991. It has been an international standard since 2000. Work began on HTML5 in 2004. It merged in 2008 but was not standardised until 2014. At the beginning of 2017, web browsers may still not be fully HTML5 compatible.</p>
-<h2 id="html-documents">HTML Documents</h2>
+<p>HTML emerged at CERN in 1991. It has been an international standard since 2000. Work began on HTML5 in 2004. The first working draft was published in 2008 but it was not standardised until 2014. At the beginning of 2017, web browsers may still not be fully HTML5 compatible.</p>
+<h3 id="html-documents">HTML Documents</h3>
 <p>An HTML document is a representation of a web page. It consists of nested HTML elements and nothing more. These describe the structure of the web page.</p>
 <p>HTML elements are represented by HTML tags. HTML tags label pieces of content.</p>
 <p>HTML tags tell a browser how to display a web page. The browser does not display the tags themselves, only their content.</p>
@@ -29,7 +35,7 @@
         <span class="kw">&lt;/body&gt;</span>
     <span class="kw">&lt;/html</span></code></pre>
 <p><code>&lt;!DocType&gt;</code> declares the document type. According to the tutorial, <code>&lt;!DocType html&gt;</code> is sufficient to declare an HTML5 document.</p>
-<h2 id="html-elements">HTML Elements</h2>
+<h3 id="html-elements">HTML Elements</h3>
 <p>All HTML documents consist of nested HTML elements: elements may contain elements.</p>
 <p>HTML elements are represented by HTML tags. They have the form:</p>
 <pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;tag-name&gt;</span>content ...<span class="kw">&lt;/tag-name&gt;</span></code></pre>
@@ -40,7 +46,7 @@
 <p>Elements with no content are called empty elements. Empty elements, such as <code>&lt;br&gt;</code>, do not have an closing tag.</p>
 <p>Empty elements may be closed in the opening tag thus: <code>&lt;br /&gt;</code>. HTML5 does not require empty elements be closed but the stricter validation of XHTML does.</p>
 <p>HTML tags are case insensitive but lower case is recommended. Lower case is required for XHTML.</p>
-<h2 id="html-attributes">HTML Attributes</h2>
+<h3 id="html-attributes">HTML Attributes</h3>
 <p>Any HTML element may have HTML attributes that provide additional information.</p>
 <p>Attributes are specified in the opening tag and (usually) come in name-value pairs with the form <code>name=value</code>.</p>
 <p>In the HTML5 standard, attribute names are case insensitive. However, lower case is recommended and is required for XHTML.</p>
@@ -50,7 +56,7 @@
 <pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&quot;Around &#39; use quotes&quot;</span><span class="kw">&gt;</span>
     <span class="kw">&lt;p</span><span class="ot"> title=</span><span class="st">&#39;Around &quot; use apostrophe&#39;</span><span class="kw">&gt;</span></code></pre>
 <p>No mention at this stage of escape sequences.</p>
-<h2 id="element-and-attribute-examples">Element and Attribute Examples</h2>
+<h3 id="element-and-attribute-examples">Element and Attribute Examples</h3>
 <!-- HTML Paragraphs -->
 
 <p>HTML Paragraphs are declared with the <code>&lt;p&gt;</code> tag:</p>
