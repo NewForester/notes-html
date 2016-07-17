@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Iframes</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
-# HTML5
 
+# HTML5
 
 ## HTML Iframes
 
@@ -18,7 +26,7 @@ It in-lines a web page within a frame.
     <iframe src="URL"></iframe>
 ```
 
-the `src=` attribute specifies the Interet address of the page to in-line,
+the `src=` attribute specifies the Internet address of the page to in-line,
 which may be a full URL or a [relative file path](file-paths.html).
 
 
