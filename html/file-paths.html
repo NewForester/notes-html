@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>
+HTML5: File Paths
+</title>
     
-<link rel="stylesheet" href="../styles/style-sheet.css" />
+<meta charset="UTF-8" /> <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" /> <meta name="keywords" content="HTML" /> <meta name="author" content="NewForester" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/styles/style-sheet.css" />
 </head>
 
 <body>
+
 <h1 id="html5">HTML5</h1>
 <h2 id="html-file-paths">HTML File Paths</h2>
 <p>An absolute file path is the full URL to an Internet file.</p>
 <p>A relative file path references a file relative to the current page and is thus within the current web site.</p>
-<p>Relative paths should be preferred. They will lead to fewer problems should your web site change its web address and facilitates local testing.</p>
-<p>There are four types of file path:</p>
+<p>Relative paths should be preferred. They will lead to fewer problems should your web site change its web address. It also facilitates local testing.</p>
+<p>There are four types of relative file path:</p>
 <ol style="list-style-type: decimal">
 <li>current directory - <code>src=&quot;animage.png&quot;</code></li>
 <li>subdirectory - <code>src=&quot;images/animage.png&quot;</code></li>
 <li>relative path - <code>src=&quot;../images/animage.png&quot;</code></li>
 <li>site path - <code>src=&quot;/images/animage.png&quot;</code></li>
 </ol>
-<hr />
+<p>The subdirectory is a subdirectory of the current directory: for a subdirectory of the site directory use a site path.</p>
+<p>Beware: site paths may not work too well when invoking local files (e.g. konqueror html/file-paths.html) as the 'site' is not the current directory.</p>
+</hr>
 
 </body>
 </html>
