@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Form Elements</title>
     <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
-# HTML5
 
+# HTML5
 
 ## HTML4 Form Elements
 
@@ -22,7 +29,7 @@ The HTML4 elements that may appear inside a `<form>` element are:
   1. textarea - used for multi-line input;
   1. button   - used to define additional clickable buttons;
   1. fieldset - used to group related form elements;
-  1. legend   - provides a `<fieldset>` element with a a caption;
+  1. legend   - provides a `<fieldset>` element with a caption;
 
 The `<input>` element is by far the most important form element.
 How  they are displayed depends on their `type=` attributes as described on the [Input Types](forms-input-type.html) page.
