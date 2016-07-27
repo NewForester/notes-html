@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Form-input-types</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
 
@@ -15,11 +24,11 @@
 In HTML4, the `type=` attribute for the `<input>` element is one of the following:
 
  1. text     - a one-line text input field;
- 1. password - a password field - data entered in masked;
+ 1. password - a password field - data entered is masked;
  1. submit   - a button for submitting data entered by the user to a form handler;
  1. image    - an image rather than a button that is used to submit data entered by the user to a form handler;
  1. reset    - a button to clear the form and reset fields to their default values;
- 1. button   - a button other that the submit or reset button that performs some other action;
+ 1. button   - a button other than the submit or reset button that performs some other action;
  1. radio    - one of a limited number of choices of which the user may select only one;
  1. checkbox - one of a limited number of choices of which the user may select more than one or none at all;
  1. file     - a Browse... button that allows one or more files to be selected for upload;
@@ -97,7 +106,7 @@ The type attributes for the `<input>` element new with HTML5 are:
  1. datetime-local   - the browser may pop-up a date/time picker;
  1. email            - the browser may check the e-address entered by the user is well formed;
  1. month            - the browser may pop-up a month + year picker;
- 1. number           - data entered must be a number (eventually within range);
+ 1. number           - data entered must be a number (eventually within a range);
  1. range            - the browser may display a slider;
  1. search           - behaves like a regular text field;
  1. tel              - the browser may check the telephone number entered is well formed;
