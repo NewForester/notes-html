@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Form-input-attributes</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
 Additional attributes may be used to qualify an input field.
@@ -19,11 +28,11 @@ In HTML4, the additional attributes that may be used to qualify an input field a
  1. value             - the default or initial value
  1. name              - the name the input field (submitted with the field value)
  1. disabled          - the field is disabled (it will not be submitted)
- 1. readonly          - the field is read only (its value cannot be changed by the user)
+ 1. readonly          - the field is read-only (its value cannot be changed by the user)
  1. checked           - pre-select checkbox or radio button field on page (form) load
  1. size              - the width (in characters) of a (text based) field
  1. maxlength         - the maximum number of characters that can be entered into the field
- 1. accept            - the acceptable file type(s) for a field `type="file"
+ 1. accept            - the acceptable file type(s) for a field `type="file"`
  1. src               - the URL for a field `type="image"`
  1. alt               - the alternative text for a field `type="image"`
  1. align             - the alignment of the image for a field `type="image"` (not supported in HTML5)
