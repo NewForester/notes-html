@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Html5</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
 ## HTML History
 
-In 1989 Sir Tim Berners-Lee invented the World Wide Web and publishes HTML in 1991.
+In 1989 Sir Tim Berners-Lee invents the World Wide Web and publishes HTML in 1991.
 
 In 1999 the W3C (World Wide Web Consortium) publishes HTML 4.01 and, in 2000, XHTML.
 
-In 2004, the W3C stopped work on HTML in favour of XHTML so WHATWG
+In 2004, the W3C stops work on HTML in favour of XHTML so WHATWG
 (Web Hypertext Application Technology Working Group) was formed to continue HTML development.
 
-In 2006 W3C conceded and the two groups worked together.
+In 2006 W3C concedes and the two groups works together.
 
 In 2008 the first HTML5 public draft was released.
 
@@ -63,7 +72,7 @@ HTML APIs are also new:
  1. drag and drop         - any element may be draggable
  1. local storage         - a powerful replacement for cookies
  1. application cache     - a cache for code, not just data
- 1. web Workers           - back ground scripts that do not affect page performance
+ 1. web workers           - background scripts that do not affect page performance
  1. server sent events    - (SSE) page update without the client polling the server
 
 
