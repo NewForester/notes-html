@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Html5-elements</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
 
@@ -27,7 +36,7 @@ They are:
  1. aside         - secondary information (such as a sidebar)
  1. details       - details that can be hidden/revealed by user action
  1. figcaption    - a caption for an image and for forth
- 1. figure        - to group a caption with an its image and so forth
+ 1. figure        - to group a caption with its image and so forth
  1. footer        - meta-information, such as copyright, about a page, section
  1. header        - introductory text for a page, section or article
  1. main          - the content of a page that is not repeated elsewhere
@@ -43,7 +52,7 @@ Beyond that it is not clear how these elements will be used in practice.
 Does a section have article or vice versa or are they mutually exclusive ?
 There are no guidelines and nesting is perfectly possible.
 
-Many of the other elements new with HTML5 may the thought of as structural elements:
+Many of the other elements new with HTML5 may be thought of as structural elements:
 
  1. bdi       - used to isolate text that might be formatted in a different direction from its surroundings
  1. dialog    - defines a dialogue box or window
@@ -71,9 +80,9 @@ There are three elements for East Asian topography:
  1. rt        - ruby notation explanation / pronunciation
  1. ruby      - spans ruby notation
 
-There are three are new [form](forms-elements.html) elements:
+There are three new [form](forms-elements.html) elements:
 
- 1. datalist  - pre defined option for input controls
+ 1. datalist  - pre-defined option for input controls
  1. keygen    - key pair generator for forms
  1. output    - for the display of a derived value
 
