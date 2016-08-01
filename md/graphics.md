@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+    <!-- notes-html by NewForester:  a series of notes on HTML5 written after studying the HTML Tutorial @ W3Schools -->
 
 <head>
+    <title>HTML5: Graphics</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Notes on HTML5 made while following the HTML Tutorial @ W3Schools" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="NewForester" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/style-sheet.css" />
 </head>
 
 <body>
+
 # HTML5
 
 HTML5 graphics has been supported by browsers for quite some time.
@@ -31,7 +40,7 @@ A `<canvas>` element provides a context handle for use by JavaScript.
 
 The context provides methods for drawing on the canvas.
 
-There is a separate W3C [HTML Canvas](https://www.w3schools.com/graphics/canvas_intro.asp) tutorial.
+There is a separate W3Schools [HTML Canvas](https://www.w3schools.com/graphics/canvas_intro.asp) tutorial.
 
 ### Examples of Canvas Drawing Methods
 
@@ -89,7 +98,7 @@ The `style=` attribute may be used to give it a border.
 The container holds XML elements for drawing paths, boxes, circles, text and graphic images.
 It does not require JavaScript.
 
-There is a separate W3C [SVG](https://www.w3schools.com/graphics/svg_intro.asp) tutorial.
+There is a separate W3Schools [SVG](https://www.w3schools.com/graphics/svg_intro.asp) tutorial.
 
 ### Examples of SVG Drawing Methods:
 
@@ -151,7 +160,7 @@ Google Maps allows even a simple web page to display a map.
 This uses an HTML API provided by Google.
 You need an API key from Google but this is free.
 
-There is a separate W3C [Google Maps](https://www.w3schools.com/graphics/google_maps_intro.asp) tutorial.
+There is a separate W3Schools [Google Maps](https://www.w3schools.com/graphics/google_maps_intro.asp) tutorial.
 
 ### Example of Rendering a Google Map:
 
