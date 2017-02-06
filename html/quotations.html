@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-quotations">HTML Quotations</h2>
+<hr /><!-- Quotation element -->
+
+<p>The <code>&lt;q&gt;</code> element delimits a short quotation.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>The crowd called <span class="kw">&lt;q&gt;</span>Long live the King !<span class="kw">&lt;/q&gt;&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+The crowd called <q>Long live the King !</q>
+</p>
+</div>
+
+<p>Browsers usually insert quotation marks around quotation element contents.</p>
+<hr /><!-- Block Quotation Elements -->
+
+<p>The <code>&lt;blockquote&gt;</code> element delimits a long quotation from another source.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;blockquote</span><span class="ot"> cite=</span><span class="st">https://en.wikipedia.org/wiki/APL_%28programming_language%29</span><span class="kw">&gt;</span>
+        APL (named after the book A Programming Language) is a programming language developed
+        in the 1960s by Kenneth E. Iverson.
+    <span class="kw">&lt;/blockquote&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=noindent>
+    <blockquote cite=https://en.wikipedia.org/wiki/APL_%28programming_language%29>
+    
+APL (named after the book A Programming Language) is a programming language developed in the 1960s by Kenneth E. Iverson.
+</blockquote>
+</div>
+
+<p>Browsers usually indent block quote element contents.</p>
+<hr /><!-- Abbreviations -->
+
+<p>The <code>&lt;abbr&gt;</code> element may be used to define abbreviations and acronyms.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>The <span class="kw">&lt;abbr</span><span class="ot"> title=</span><span class="st">&quot;A Programming Language&quot;</span><span class="kw">&gt;</span>APL<span class="kw">&lt;/abbr&gt;</span> is a programming language developed from mathematical notation.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+The <abbr title="A Programming Language">APL</abbr> is a programming language developed from mathematical notation.
+</p>
+</div>
+
+<p>Such elements may be of use to browsers, translation systems and search engines.</p>
+<hr /><!-- Contact Information -->
+
+<p>The <code>&lt;address&gt;</code> element may be used to identify contact information for the author of an HTML document.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;address&gt;</span>
+    Written by Winnie-the-Pooh.<span class="kw">&lt;br&gt;</span>
+    Visit us at:<span class="kw">&lt;br&gt;</span>
+    Pooh Corner<span class="kw">&lt;br&gt;</span>
+    Hundred Acre Wood<span class="kw">&lt;br&gt;</span>
+    England<span class="kw">&lt;br&gt;</span>
+    <span class="kw">&lt;/address&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <address>
+    
+Written by Winnie-the-Pooh.<br> Visit us at:<br> Pooh Corner<br> Hundred Acre Wood<br> England<br>
+</address>
+</div>
+
+<p>Browsers usually display the contact information in italics and add a line break before and after.</p>
+<hr /><!-- Citations -->
+
+<p>The <code>&lt;cite&gt;</code> element declares the title of a work.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;&lt;cite&gt;</span>The House at Pooh Corner<span class="kw">&lt;/cite&gt;</span> by A.A.Milne.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+<cite>The House at Pooh Corner</cite> by A.A.Milne.
+</p>
+</div>
+
+<p>Browsers usually display citations in italics.</p>
+<hr /><!-- Bi-directional Override -->
+
+<p>The <code>&lt;bdo&gt;</code> element is used to override the current text direction.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>Some text <span class="kw">&lt;bdo</span><span class="ot"> dir=</span><span class="st">&quot;rtl&quot;</span><span class="kw">&gt;</span>back to front<span class="kw">&lt;/bdo&gt;</span>.<span class="kw">&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+Some text <bdo dir="rtl">back to front</bdo>.
+</p>
+</div>
+
+<p>The <code>dir=</code> attribute defines the text direction.</p>
+<hr />
+
+</body>
+</html>
+
+
