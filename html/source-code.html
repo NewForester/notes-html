@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<link rel="stylesheet" href="../styles/style-sheet.css" />
+</head>
+
+<body>
+<h1 id="html5">HTML5</h1>
+<h2 id="html-computer-code">HTML Computer Code</h2>
+<p>HTML uses variable spaced fonts whereas computer code is generally displayed using fixed spaced fonts.</p>
+<hr /><!-- Computer Code -->
+
+<p>The <code>&lt;code&gt;</code> element may be used to present source code.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;code&gt;</span>
+    unless (caller(0)) {
+        run(@ARGV) or print_illumination();
+        exit();
+    }
+    <span class="kw">&lt;/code&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    
+<code> unless (caller(0)) { run(@ARGV) or print_illumination(); exit(); } </code>
+</div>
+
+
+<hr /><!-- Source Code -->
+
+<p>The <code>&lt;code&gt;</code> element does not preserve white space and line-breaks unless enclosed in the <code>&lt;pre&gt;</code> element.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;pre&gt;&lt;code&gt;</span>
+    unless (caller(0)) {
+        run(@ARGV) or print_illumination();
+        exit();
+    }
+    <span class="kw">&lt;/code&gt;&lt;/pre&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=noindent>
+    <pre><code>
+    unless (caller(0)) {
+        run(@ARGV) or print_illumination();
+        exit();
+    }
+    </code></pre>
+</div>
+
+
+<hr /><!-- Keyboard Board Input -->
+
+<p>The <code>&lt;kbd&gt;</code> element delimits keyboard input.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>Then convert with: <span class="kw">&lt;kbd&gt;</span>pandoc quotations.md &gt; quotations.html<span class="kw">&lt;/kbd&gt;&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+Then convert with: <kbd>pandoc quotations.md &gt; quotations.html</kbd>
+</p>
+</div>
+
+
+<hr /><!-- Terminal Output -->
+
+<p>The <code>&lt;samp&gt;</code> element delimits sample output from a computer program.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;pre&gt;</span>
+    <span class="kw">&lt;samp&gt;</span>
+    [    0.000000] Initializing cgroup subsys cpuset
+    [    0.000000] Initializing cgroup subsys cpu
+    [    0.000000] Linux version 3.2.0-4-amd64 (debian-kernel@lists.debian.org) (gcc version 4.6.3 (Debian 4.6.3-14) ) #1 SMP Debian 3.2.84-1
+    [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.2.0-4-amd64 root=UUID=34203936-4c81-4ef9-a335-48b8e41653d2 ro quiet
+    <span class="kw">&lt;/samp&gt;</span>
+    <span class="kw">&lt;/pre&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=noindent>
+    <pre>
+    <samp>
+    [    0.000000] Initializing cgroup subsys cpuset
+    [    0.000000] Initializing cgroup subsys cpu
+    [    0.000000] Linux version 3.2.0-4-amd64 (debian-kernel@lists.debian.org) (gcc version 4.6.3 (Debian 4.6.3-14) ) #1 SMP Debian 3.2.84-1
+    [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.2.0-4-amd64 root=UUID=34203936-4c81-4ef9-a335-48b8e41653d2 ro quiet
+    </samp>
+    </pre>
+</div>
+
+
+<hr /><!-- Variables -->
+
+<p>The <code>&lt;var&gt;</code> element delimits a program variable or a mathematical expression.</p>
+<pre class="sourceCode html"><code class="sourceCode html">    <span class="kw">&lt;p&gt;</span>Euler&#39;s Equation: <span class="kw">&lt;var&gt;</span>e<span class="kw">&lt;sup&gt;</span>ix<span class="kw">&lt;/sup&gt;</span> = cos x + i sin x<span class="kw">&lt;/var&gt;&lt;/p&gt;</span></code></pre>
+<p>
+will appear as:
+</p>
+<div class=indent>
+    <p>
+Euler's Equation: <var>e<sup>ix</sup> = cos x + i sin x</var>
+</p>
+</div>
+
+<hr />
+
+</body>
+</html>
+
+
